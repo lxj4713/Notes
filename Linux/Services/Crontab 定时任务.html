@@ -1,0 +1,1375 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Crontab 定时任务 · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="DNS 域名解析服务.html" />
+    
+    
+    <link rel="prev" href="Apache web服务器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Basics/DHCP.html">
+            
+                <a href="../Basics/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Basics/RPM工具及YUM仓库.html">
+            
+                <a href="../Basics/RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Basics/SSH 远程服务及SCP.html">
+            
+                <a href="../Basics/SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Basics/TCP IP.html">
+            
+                <a href="../Basics/TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Basics/文件目录管理.html">
+            
+                <a href="../Basics/文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Basics/用户身份及权限.html">
+            
+                <a href="../Basics/用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Basics/磁盘管理与文件系统.html">
+            
+                <a href="../Basics/磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Basics/网络服务管理.html">
+            
+                <a href="../Basics/网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../DevOps/Ansible/ansible.html">
+            
+                <a href="../DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../DevOps/Git相关/Git使用.html">
+            
+                <a href="../DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Environment/python环境安装.html">
+            
+                <a href="../Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../Others/Untitled.html">
+            
+                <a href="../Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../Others/markdown语法.html">
+            
+                <a href="../Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../Others/vimium快捷键.html">
+            
+                <a href="../Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="Apache web服务器.html">
+            
+                <a href="Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.2" data-path="Crontab 定时任务.html">
+            
+                <a href="Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="DNS 域名解析服务.html">
+            
+                <a href="DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="FTP 文件传输服务器.html">
+            
+                <a href="FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="Firewalld 防火墙.html">
+            
+                <a href="Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="LNMP 架构网站搭建.html">
+            
+                <a href="LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="MariaDB MySQL 服务.html">
+            
+                <a href="MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="Rsync 同步服务.html">
+            
+                <a href="Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../Python/Modules/Flask/flask博客.html">
+            
+                <a href="../../Python/Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../Python/Modules/Untitled.html">
+            
+                <a href="../../Python/Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../Python/Modules/celery/任务回调.html">
+            
+                <a href="../../Python/Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../Python/Modules/longging 日志模块.html">
+            
+                <a href="../../Python/Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../Python/Modules/内置模块.html">
+            
+                <a href="../../Python/Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../Python/Python Basics/python收集小知识.html">
+            
+                <a href="../../Python/Python Basics/python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../Python/Python Basics/python装饰器.html">
+            
+                <a href="../../Python/Python Basics/python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../Python/Python Basics/内存管理.html">
+            
+                <a href="../../Python/Python Basics/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../Python/Python Basics/函数编程.html">
+            
+                <a href="../../Python/Python Basics/函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../Python/Python Basics/并发编程.html">
+            
+                <a href="../../Python/Python Basics/并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../Python/Python Basics/数据编码和处理.html">
+            
+                <a href="../../Python/Python Basics/数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../Python/Python Basics/类与对象.html">
+            
+                <a href="../../Python/Python Basics/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../../Python/Python Basics/网络编程.html">
+            
+                <a href="../../Python/Python Basics/网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../Python/Python Wheel/Django发送Email.html">
+            
+                <a href="../../Python/Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../Python/Python Wheel/python等环境安装.html">
+            
+                <a href="../../Python/Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Crontab 定时任务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;-crontab">&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;-crontab</a><ul>
+<li><a href="#crontab&#x547D;&#x4EE4;">crontab&#x547D;&#x4EE4;</a></li>
+<li><a href="#crontab&#x8BBE;&#x7F6E;">crontab&#x8BBE;&#x7F6E;</a></li>
+</ul>
+</li>
+<li><a href="#&#x4E8C;&#x4E00;&#x6B21;&#x6027;&#x4EFB;&#x52A1;-st">&#x4E8C;.&#x4E00;&#x6B21;&#x6027;&#x4EFB;&#x52A1;-st</a></li>
+</ul>
+<!-- tocstop -->
+<h1 id="&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;-crontab">&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;-crontab</h1>
+<h2 id="crontab&#x547D;&#x4EE4;">crontab&#x547D;&#x4EE4;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-e</td>
+<td>&#x7F16;&#x8F91;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x8BA1;&#x65F6;&#x5668;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>&#x5217;&#x51FA;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x8BA1;&#x65F6;&#x5668;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>&#x5220;&#x9664;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x8BA1;&#x65F6;&#x5668;&#x8BBE;&#x7F6E;</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>&#x6307;&#x5B9A;&#x8981;&#x8BBE;&#x5B9A;&#x8BA1;&#x65F6;&#x5668;&#x7684;&#x7528;&#x6237;&#x540D;&#x79F0;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash">crontab <span class="hljs-_">-l</span>   <span class="hljs-comment">#&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</span>
+crontab <span class="hljs-_">-e</span>   <span class="hljs-comment">#&#x521B;&#x5EFA;&#x3001;&#x7F16;&#x8F91;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</span>
+crontab -r   <span class="hljs-comment">#&#x5220;&#x9664;&#x67D0;&#x6761;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;</span>
+
+crontab <span class="hljs-_">-e</span> -u lxj  <span class="hljs-comment"># &#x7F16;&#x8F91;lxj&#x7528;&#x6237;&#x7684;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;</span>
+</code></pre>
+<blockquote>
+<p>minute   hour   day   month   week   command 
+&#x987A;&#x5E8F;&#xFF1A;&#x5206; &#x65F6; &#x65E5; &#x6708; &#x5468; &#x547D;&#x4EE4;   </p>
+<p>minute&#x5206;&#x949F;&#xFF1A;0-59 &#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x4F55;&#x6574;&#x6570;
+hour&#x5C0F;&#x65F6;&#xFF1A;1-23<br>day&#x65E5;&#x671F;&#xFF1A;1-31<br>mouth&#x6708;&#x4EFD;&#xFF1A;1-12<br>week&#x661F;&#x671F;&#xFF1A;0-6&#xFF08;0/7&#x8868;&#x793A;&#x5468;&#x65E5;&#xFF09;<br>command&#xFF1A;&#x8981;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;,&#x7CFB;&#x7EDF;&#x547D;&#x4EE4;&#x6216;&#x811A;&#x672C;&#x6587;&#x4EF6;  </p>
+<p>&#x53EF;&#x4EE5;&#x7528;&#x7B26;&#x53F7;&#x8868;&#x793A;<br>*   &#x8868;&#x793A;&#x4EFB;&#x4F55;&#x65F6;&#x523B;<br>,   &#x6307;&#x5B9A;&#x5217;&#x8868;&#x8303;&#x56F4;&#xFF0C;&quot;1,3,5,7&quot;<br>-   &#x6307;&#x5B9A;&#x6574;&#x6570;&#x8303;&#x56F4;&#xFF0C;&quot;1-5&quot; &#x8868;&#x793A; &quot;1,2,3,4,5&quot; 1&#x5230;5&#x70B9;<br>/n  &#x8868;&#x793A;&#x6267;&#x884C;&#x9891;&#x7387;&#xFF0C;&#x6BCF;&#x4E2A;n&#x7684;&#x5355;&#x4F4D;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x5982;&#xFF1A;*/1, &#x5C31;&#x8868;&#x793A;&#x6BCF;&#x9694;1&#x4E2A;&#x5C0F;&#x65F6;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x547D;&#x4EE4;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;1-23/1</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;  </p>
+<ul>
+<li>&#x5728;crond&#x670D;&#x52A1;&#x7684;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x4E00;&#x5B9A;&#x8981;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5199;  </li>
+<li>&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x201C;&#x5206;&#x201D;&#x5B57;&#x6BB5;&#x5FC5;&#x987B;&#x6709;&#x6570;&#x503C;&#xFF0C;&#x7EDD;&#x5BF9;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#x6216;&#x662F;*&#x53F7;&#xFF0C;&#x800C;&#x201C;&#x65E5;&#x201D;&#x548C;&#x201C;&#x661F;&#x671F;&#x201D;&#x5B57;&#x6BB5;&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x3002;</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x8BBE;&#x7F6E;&#x4E3E;&#x4F8B;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">43 21 <em> </em> *</td>
+<td style="text-align:left">21:43 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">43 21 <em> </em> *</td>
+<td style="text-align:left">21:43 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">15 05 <em> </em> *</td>
+<td style="text-align:left">05:15 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 17 <em> </em> *</td>
+<td style="text-align:left">17:00 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 17 <em> </em> 1</td>
+<td style="text-align:left">&#x6BCF;&#x5468;&#x4E00;&#x7684;17:00 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0,10 17 <em> </em> 0,2,3</td>
+<td style="text-align:left">&#x6BCF;&#x5468;&#x65E5;,&#x5468;&#x4E8C;,&#x5468;&#x4E09;&#x7684;17:00&#x548C;17:10 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0-10 17 1 <em> </em></td>
+<td style="text-align:left">&#x6BCE;&#x6708;1&#x65E5;&#x4ECE;17:00&#x5230;7:10&#x6BCE;&#x9694;1&#x5206;&#x949F; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 0 1,15 * 1</td>
+<td style="text-align:left">&#x6BCE;&#x6708;1&#x65E5;&#x548C;15&#x65E5;&#x548C;&#x4E00;&#x65E5;&#x7684;0:00 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">42 4 1 <em> </em></td>
+<td style="text-align:left">&#x6BCE;&#x6708;1&#x65E5;&#x7684;4:42&#x5206; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 21 <em> </em> 1-6</td>
+<td style="text-align:left">&#x5468;&#x4E00;&#x5230;&#x5468;&#x516D;21:00 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0,10,20,30,40,50 <em> </em> <em> </em></td>
+<td style="text-align:left">&#x6BCF;&#x9694;10&#x5206; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/10 </em> <em> </em> *</td>
+<td style="text-align:left">&#x6BCF;&#x9694;10&#x5206; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> 1 </em> <em> </em></td>
+<td style="text-align:left">&#x4ECE;1:0&#x5230;1:59&#x6BCF;&#x9694;1&#x5206;&#x949F; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 1 <em> </em> *</td>
+<td style="text-align:left">1:00 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 <em>/1 </em> <em> </em></td>
+<td style="text-align:left">&#x6BCE;&#x65F6;0&#x5206;&#x6BCF;&#x9694;1&#x5C0F;&#x65F6; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">0 <em> </em> <em> </em></td>
+<td style="text-align:left">&#x6BCE;&#x65F6;0&#x5206; &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">2 8-20/3 <em> </em> *</td>
+<td style="text-align:left">8:02,11:02,14:02,17:02,20:02 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left">30 5 1,15 <em> </em></td>
+<td style="text-align:left">1&#x65E5;&#x548C;15&#x65E5;&#x7684;5:30 &#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> <em> </em> <em> rm -rf /mnt/</em></td>
+<td style="text-align:left">&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>/2 </em> <em> </em> <em> rm -rf /mnt/</em></td>
+<td style="text-align:left">&#x6BCF;&#x9694;2&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em>/2 <em> </em> <em> rm -rf /mnt/</em></td>
+<td style="text-align:left">&#x6BCF;&#x9694;2&#x5C0F;&#x65F6;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> 10-12 </em> <em> </em> rm -rf /mnt/*</td>
+<td style="text-align:left">&#x6BCF;&#x5929;&#x5341;&#x70B9;&#x5230;&#x5341;&#x4E8C;&#x70B9;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> 10,20 <em> </em> rm -rf /mnt/*</td>
+<td style="text-align:left">&#x6BCF;&#x4E2A;&#x6708;&#x7684;&#x5341;&#x53F7;&#x4E8C;&#x5341;&#x53F7;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> 10-20 <em> </em> rm -rf /mnt/*</td>
+<td style="text-align:left">&#x6BCF;&#x4E2A;&#x6708;&#x7684;&#x5341;&#x53F7;&#x81F3;&#x4E8C;&#x5341;&#x53F7;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> <em> 6 </em> rm -rf /mnt/*</td>
+<td style="text-align:left">&#x516D;&#x6708;&#x4EFD;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> <em> </em> 2,5 rm -rf /mnt/*</td>
+<td style="text-align:left">&#x6BCF;&#x5468;&#x4E8C;&#x5468;&#x4E94;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+<tr>
+<td style="text-align:left"><em> </em> <em> </em> 2-5 rm -rf /mnt/*</td>
+<td style="text-align:left">&#x6BCF;&#x5468;&#x4E8C;&#x5230;&#x5468;&#x4E94;&#x6BCF;&#x5206;&#x949F;&#x5220;&#x9664;&#x4E00;&#x6B21;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="crontab&#x8BBE;&#x7F6E;">crontab&#x8BBE;&#x7F6E;</h2>
+<pre><code>service crond status           &#x68C0;&#x67E5;crond&#x670D;&#x52A1;&#x662F;&#x5426;&#x8FD0;&#x884C; /sbin/service  &#x6216; ps -elf|grep crond|grep -v &quot;grep&quot;   /sbin/service crond status      pgrep crond
+service crond start            &#x624B;&#x52A8;&#x542F;&#x52A8;crontab&#x670D;&#x52A1;  
+service crond stop             &#x5173;&#x95ED;crontab&#x670D;&#x52A1;
+service crond restart          &#x91CD;&#x542F;&#x670D;&#x52A1;
+service crond reload           &#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;
+ntsysv                         &#x67E5;&#x770B;crontab&#x670D;&#x52A1;&#x662F;&#x5426;&#x5DF2;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F00;&#x673A;&#x542F;&#x52A8; (&#x8BBE;&#x7F6E;&#x7CFB;&#x7EDF;&#x7684;&#x5404;&#x79CD;&#x670D;&#x52A1;)
+chkconfig &#x2013;level 35 crond on   &#x52A0;&#x5165;&#x5F00;&#x673A;&#x81EA;&#x52A8;&#x542F;&#x52A8;  
+&#x5B89;&#x88C5;cron
+    yum install vixie-cron
+    yun install crontabs
+
+
+&#x81EA;&#x52A8;&#x6DFB;&#x52A0;crontab &#x4EFB;&#x52A1;
+
+1.&#x7F16;&#x8F91; /var/spool/cron/&#x7528;&#x6237;&#x540D;&#x6587;&#x4EF6;
+echo &quot;* * * * * hostname &gt;&gt; /tmp/tmp.txt&quot; &gt;&gt; /var/spool/cron/root
+
+2.&#x7F16;&#x8F91; /etc/crontab &#x6587;&#x4EF6;,   &#x9700;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x540D;,&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x4E3A;&#x7CFB;&#x7EDF;&#x7EA7;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1; &#x4E0D;&#x5EFA;&#x8BAE;&#x6DFB;&#x52A0;&#x975E;&#x7CFB;&#x7EDF;&#x7C7B;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x7F16;&#x8F91;&#x8BE5;&#x6587;&#x4EF6;&#x4E5F;&#x9700;&#x8981;root&#x6743;&#x9650;
+echo &quot;* * * * * root hostname &gt;&gt; /tmp/tmp.txt&quot; &gt;&gt; /etc/crontab
+
+3. &#x5229;&#x7528;crontab -l &#x52A0; crontab file &#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#xFF0C;&#x7531;&#x4E8E;crontab file&#x4F1A;&#x8986;&#x76D6;&#x539F;&#x6709;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#xFF0C;&#x6240;&#x4EE5;&#x4F7F;&#x7528; crontab -l &#x5148;&#x5BFC;&#x51FA;&#x539F;&#x6709;&#x4EFB;&#x52A1;&#x5230;&#x4E34;&#x65F6;&#x6587;&#x4EF6; &#x201C;conf&#x201D; &#x518D;&#x8FFD;&#x52A0;&#x65B0;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;
+crontab -l &gt; conf &amp;&amp; echo &quot;* * * * * hostname &gt;&gt; /tmp/tmp.txt&quot; &gt;&gt; conf &amp;&amp; crontab conf &amp;&amp; rm -f conf
+
+
+&#x53D1;&#x8D77;&#x65B9;&#x5F0F;&#x4E8C;#vim /etc/cron.d/filename[root@centos ~]# cat &gt;&gt; file &lt;&lt; end&#x5206;&#x949F; &#x5C0F;&#x65F6; &#x5929; &#x6708; &#x5468; &#x7528;&#x6237; &#x52A8;&#x4F5C;* * * * * root touch /tmp/file1      #&#x8D85;&#x7EA7;&#x7528;&#x6237;&#x6BCF;&#x5206;&#x949F;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;file1* * * * * student touch /tmp/file2   #&#x666E;&#x901A;&#x7528;&#x6237;&#x6BCF;&#x5206;&#x949F;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;file2
+
+crontab &#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x6743;&#x529B;&#x8BBE;&#x5B9A;
+
+##&#x7CFB;&#x7EDF;&#x6240;&#x6709;&#x7528;&#x6237;&#x9ED8;&#x8BA4;&#x4E0D;&#x80FD;&#x6267;&#x884C;crontab&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x540D;&#x5355;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;
+/etc/cron.deny    #&#x7528;&#x6237;&#x9ED1;&#x540D;&#x5355;&#xFF0C;&#x5728;&#x6B64;&#x540D;&#x5355;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x6267;&#x884C;crontab&#x547D;&#x4EE4;
+/etc/cron.allow   #&#x7528;&#x6237;&#x767D;&#x540D;&#x5355;&#xFF0C;&#x540D;&#x5355;&#x9ED8;&#x8BA4;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x540D;&#x5355;&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#xFF0C;&#x9ED1;&#x540D;&#x5355;&#x5931;&#x6548;
+
+3.&#x7CFB;&#x7EDF;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x7684;&#x7BA1;&#x7406;
+
+
+&#x7CFB;&#x7EDF;&#x4E2D;&#x670D;&#x52A1;&#x5728;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x4EA7;&#x751F;&#x4E34;&#x65F6;&#x6587;&#x4EF6;
+systemd-tmpfiles &#x2013;create /usr/lib/tmpfiles.d/*           #&#x6267;&#x884C;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x914D;&#x7F6E;
+/usr/lib/tmpfiles.d/filename.conf                        #&#x7CFB;&#x7EDF;&#x4E2D;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;
+systemd-tmpfiles --clean /usr/lib/tmpfiles.d/*            #&#x6E05;&#x91CC;&#x4E34;&#x65F6;&#x6587;&#x4EF6;
+
+
+
+2. &#x6CE8;&#x610F;&#x6E05;&#x7406;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x7684;&#x90AE;&#x4EF6;&#x65E5;&#x5FD7;
+&#x6BCF;&#x6761;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x7CFB;&#x7EDF;&#x90FD;&#x4F1A;&#x5C06;&#x4EFB;&#x52A1;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x901A;&#x8FC7;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x9001;&#x7ED9;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#xFF0C;&#x8FD9;&#x6837;&#x65E5;&#x79EF;&#x6708;&#x7D2F;&#xFF0C;&#x65E5;&#x5FD7;&#x4FE1;&#x606F;&#x4F1A;&#x975E;&#x5E38;&#x5927;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x7684;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5C06;&#x6BCF;&#x6761;&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x5904;&#x7406;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;crontab&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#xFF0C;&#x5FFD;&#x7565;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#xFF1A;
+0 */3 * * * /usr/local/apache2/apachectl restart &gt;/dev/null 2&gt;&amp;1
+&#x201C;/dev/null 2&gt;&amp;1&#x201D;&#x8868;&#x793A;&#x5148;&#x5C06;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x91CD;&#x5B9A;&#x5411;&#x5230;/dev/null&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#xFF0C;&#x7531;&#x4E8E;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x5DF2;&#x7ECF;&#x91CD;&#x5B9A;&#x5411;&#x5230;&#x4E86;/dev/null&#xFF0C;&#x56E0;&#x6B64;&#x6807;&#x51C6;&#x9519;&#x8BEF;&#x4E5F;&#x4F1A;&#x91CD;&#x5B9A;&#x5411;&#x5230;/dev/null&#xFF0C;&#x8FD9;&#x6837;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x95EE;&#x9898;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#x3002;
+3. &#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E0E;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;
+&#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E9B;&#x7EF4;&#x62A4;&#x64CD;&#x4F5C;&#xFF0C;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E9B;&#x4EFB;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7528;&#x6237;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x653E;&#x5230;&#x7CFB;&#x7EDF;&#x7EA7;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x6765;&#x5B8C;&#x6210;&#xFF08;&#x4E0D;&#x5EFA;&#x8BAE;&#x8FD9;&#x4E48;&#x505A;&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x53CD;&#x8FC7;&#x6765;&#x5374;&#x4E0D;&#x884C;&#xFF0C;root&#x7528;&#x6237;&#x7684;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x201C;crontab &#x2013;uroot &#x2013;e&#x201D;&#x6765;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x8C03;&#x5EA6;&#x4EFB;&#x52A1;&#x76F4;&#x63A5;&#x5199;&#x5165;/etc/crontab&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5C06;&#x4EFB;&#x52A1;&#x653E;&#x5230;/etc/crontab&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x4F7F;&#x5728;root&#x7528;&#x6237;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;&#x7684;&#x4EFB;&#x52A1;&#x4E5F;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;
+4. &#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x4E8B;&#x9879;
+&#x65B0;&#x521B;&#x5EFA;&#x7684;cron job&#xFF0C;&#x4E0D;&#x4F1A;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x8FC7;2&#x5206;&#x949F;&#x624D;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x91CD;&#x542F;cron&#x5219;&#x9A6C;&#x4E0A;&#x6267;&#x884C;&#x3002;
+&#x5F53;crontab&#x7A81;&#x7136;&#x5931;&#x6548;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;/etc/init.d/crond restart&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;&#x6216;&#x8005;&#x67E5;&#x770B;&#x65E5;&#x5FD7;&#x770B;&#x67D0;&#x4E2A;job&#x6709;&#x6CA1;&#x6709;&#x6267;&#x884C;/&#x62A5;&#x9519;tail -f /var/log/cron&#x3002;
+&#x5343;&#x4E07;&#x522B;&#x4E71;&#x8FD0;&#x884C;crontab -r&#x3002;&#x5B83;&#x4ECE;Crontab&#x76EE;&#x5F55;&#xFF08;/var/spool/cron&#xFF09;&#x4E2D;&#x5220;&#x9664;&#x7528;&#x6237;&#x7684;Crontab&#x6587;&#x4EF6;&#x3002;&#x5220;&#x9664;&#x4E86;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;crontab&#x90FD;&#x6CA1;&#x4E86;&#x3002;
+&#x5728;crontab&#x4E2D;%&#x662F;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#x7684;&#xFF0C;&#x8868;&#x793A;&#x6362;&#x884C;&#x7684;&#x610F;&#x601D;&#x3002;&#x5982;&#x679C;&#x8981;&#x7528;&#x7684;&#x8BDD;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;\%&#xFF0C;&#x5982;&#x7ECF;&#x5E38;&#x7528;&#x7684;date &#x2018;+%Y%m%d&#x2019;&#x5728;crontab&#x91CC;&#x662F;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x5E94;&#x8BE5;&#x6362;&#x6210;date &#x2018;+\%Y\%m\%d&#x2019;&#x3002;
+
+
+
+
+&#x67E5;&#x770B;cron&#x670D;&#x52A1;&#x662F;&#x5426;&#x8D77;&#x4F5C;&#x7528;&#xFF1A;
+
+
+&#x67E5;&#x770B;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x662F;&#x5426;&#x51C6;&#x65F6;&#x8C03;&#x7528;&#x4E86;&#x53EF;&#x4EE5;/var/log/cron&#x4E2D;&#x7684;&#x8FD0;&#x884C;&#x4FE1;&#x606F;
+
+cat /var/log/cron
+&#x6216;
+grep .*\.sh /var/log/cron   &#x641C;&#x7D22;.sh&#x7C7B;&#x578B;&#x6587;&#x4EF6;&#x4FE1;&#x606F;
+
+
+crontab&#x4E0D;&#x6267;&#x884C;&#xFF0C;&#x53EF;&#x8FDB;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;
+crontab -u root /var/spool/cron/root
+&#x6216;
+service crond restart  &#x91CD;&#x542F;&#x670D;&#x52A1;
+</code></pre><h1 id="&#x4E8C;&#x4E00;&#x6B21;&#x6027;&#x4EFB;&#x52A1;-st">&#x4E8C;.&#x4E00;&#x6B21;&#x6027;&#x4EFB;&#x52A1;-st</h1>
+<p>at&#x547D;&#x4EE4;
+&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x6EE1;&#x8DB3;&#x4E34;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x9700;&#x6C42;&#x3002;&#x53EF;&#x4EE5;&#x7528;at&#x547D;&#x4EE4;&#x5B9E;&#x73B0;&#x8FD9;&#x79CD;&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5199;&#x6210;&#x201C;at &#x65F6;&#x95F4;&#x201D;&#x7684;&#x5F62;&#x5F0F;&#x5C31;&#x53EF;&#x4EE5;&#x3002;</p>
+<p>at -l           &#x67E5;&#x770B;&#x5DF2;&#x8BBE;&#x7F6E;&#x597D;&#x4F46;&#x672A;&#x6267;&#x884C;&#x7684;&#x4E00;&#x6B21;&#x6027;&#x4EFB;&#x52A1;
+atrm &#x4EFB;&#x52A1;&#x5E8F;&#x53F7;    &#x53EF;&#x5C06;&#x5BF9;&#x5E94;&#x5E8F;&#x53F7;&#x4EFB;&#x52A1;&#x5220;&#x9664;  &#x4F7F;&#x7528;at&#x547D;&#x4EE4;&#x6765;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#x6027;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;&#x7684;&#x662F;&#x4EA4;&#x4E92;&#x5F0F;&#x65B9;&#x6CD5;</p>
+<p>[root@linuxprobe ~]# at 23:30
+at &gt; systemctl restart httpd
+at &gt; &#x6B64;&#x5904;&#x8BF7;&#x540C;&#x65F6;&#x6309;&#x4E0B;Ctrl+d&#x6765;&#x7ED3;&#x675F;&#x7F16;&#x5199;&#x8BA1;&#x5212;&#x4EFB;&#x52A1;
+job 3 at Mon Apr 27 23:30:00 2015
+[root@linuxprobe ~]# echo &quot;systemctl restart httpd&quot; | at 23:30  &#x4E5F;&#x53EF;&#x8FD9;&#x79CD;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x5199;&#x6CD5;&#x521B;&#x5EFA;at&#x4EFB;&#x52A1;
+[root@linuxprobe ~]# at -l
+3 Mon Apr 27 23:30:00 2016 a root
+at now+1min  #&#x5EF6;&#x8FDF;&#x4E00;&#x5206;&#x949F;
+at -f file   #&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;</p>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Apache web服务器.html" class="navigation navigation-prev " aria-label="Previous page: Apache Web服务器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="DNS 域名解析服务.html" class="navigation navigation-next " aria-label="Next page: DNS 域名解析服务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Crontab 定时任务","level":"2.5.2","depth":2,"next":{"title":"DNS 域名解析服务","level":"2.5.3","depth":2,"path":"Linux/Services/DNS 域名解析服务.md","ref":"Linux/Services/DNS 域名解析服务.md","articles":[]},"previous":{"title":"Apache Web服务器","level":"2.5.1","depth":2,"path":"Linux/Services/Apache web服务器.md","ref":"Linux/Services/Apache web服务器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Linux/Services/Crontab 定时任务.md","mtime":"2021-01-06T04:04:47.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

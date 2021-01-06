@@ -1,0 +1,1293 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SSH 远程服务及SCP · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="TCP IP.html" />
+    
+    
+    <link rel="prev" href="RPM工具及YUM仓库.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="DHCP.html">
+            
+                <a href="DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="RPM工具及YUM仓库.html">
+            
+                <a href="RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.3" data-path="SSH 远程服务及SCP.html">
+            
+                <a href="SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="TCP IP.html">
+            
+                <a href="TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="文件目录管理.html">
+            
+                <a href="文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="用户身份及权限.html">
+            
+                <a href="用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="磁盘管理与文件系统.html">
+            
+                <a href="磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="网络服务管理.html">
+            
+                <a href="网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../DevOps/Ansible/ansible.html">
+            
+                <a href="../DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../DevOps/Git相关/Git使用.html">
+            
+                <a href="../DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Environment/python环境安装.html">
+            
+                <a href="../Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../Others/Untitled.html">
+            
+                <a href="../Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../Others/markdown语法.html">
+            
+                <a href="../Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../Others/vimium快捷键.html">
+            
+                <a href="../Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../Services/Apache web服务器.html">
+            
+                <a href="../Services/Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../Services/Crontab 定时任务.html">
+            
+                <a href="../Services/Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../Services/DNS 域名解析服务.html">
+            
+                <a href="../Services/DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../Services/FTP 文件传输服务器.html">
+            
+                <a href="../Services/FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="../Services/Firewalld 防火墙.html">
+            
+                <a href="../Services/Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="../Services/LNMP 架构网站搭建.html">
+            
+                <a href="../Services/LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="../Services/MariaDB MySQL 服务.html">
+            
+                <a href="../Services/MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="../Services/Rsync 同步服务.html">
+            
+                <a href="../Services/Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../Python/Modules/Flask/flask博客.html">
+            
+                <a href="../../Python/Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../Python/Modules/Untitled.html">
+            
+                <a href="../../Python/Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../Python/Modules/celery/任务回调.html">
+            
+                <a href="../../Python/Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../Python/Modules/longging 日志模块.html">
+            
+                <a href="../../Python/Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../Python/Modules/内置模块.html">
+            
+                <a href="../../Python/Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../Python/Python Basics/python收集小知识.html">
+            
+                <a href="../../Python/Python Basics/python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../Python/Python Basics/python装饰器.html">
+            
+                <a href="../../Python/Python Basics/python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../Python/Python Basics/内存管理.html">
+            
+                <a href="../../Python/Python Basics/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../Python/Python Basics/函数编程.html">
+            
+                <a href="../../Python/Python Basics/函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../Python/Python Basics/并发编程.html">
+            
+                <a href="../../Python/Python Basics/并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../Python/Python Basics/数据编码和处理.html">
+            
+                <a href="../../Python/Python Basics/数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../Python/Python Basics/类与对象.html">
+            
+                <a href="../../Python/Python Basics/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../../Python/Python Basics/网络编程.html">
+            
+                <a href="../../Python/Python Basics/网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../Python/Python Wheel/Django发送Email.html">
+            
+                <a href="../../Python/Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../Python/Python Wheel/python等环境安装.html">
+            
+                <a href="../../Python/Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SSH 远程服务及SCP</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#ssh&#x8FDC;&#x7A0B;&#x670D;&#x52A1;">SSH&#x8FDC;&#x7A0B;&#x670D;&#x52A1;</a><ul>
+<li><a href="#ssh&#x5B89;&#x88C5;">ssh&#x5B89;&#x88C5;</a></li>
+<li><a href="#ssh-&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;">ssh &#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;</a></li>
+<li><a href="#ssh&#x914D;&#x7F6E;&#x6587;&#x4EF6;">ssh&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li>
+<li><a href="#ssh-key-&#x5B89;&#x5168;&#x5BC6;&#x94A5;">ssh-key &#x5B89;&#x5168;&#x5BC6;&#x94A5;</a></li>
+<li><a href="#&#x8BBF;&#x95EE;&#x63A7;&#x5236;">&#x8BBF;&#x95EE;&#x63A7;&#x5236;</a></li>
+</ul>
+</li>
+<li><a href="#scp-&#x8FDC;&#x7A0B;&#x4F20;&#x8F93;">SCP &#x8FDC;&#x7A0B;&#x4F20;&#x8F93;</a></li>
+<li><a href="#sftp">sftp</a></li>
+<li><a href="#rsync">rsync</a></li>
+</ul>
+<!-- tocstop -->
+<h1 id="ssh&#x8FDC;&#x7A0B;&#x670D;&#x52A1;">SSH&#x8FDC;&#x7A0B;&#x670D;&#x52A1;</h1>
+<blockquote>
+<p>ssh &#x670D;&#x52A1;&#x5305;&#x62EC; ssh&#xFF0C;scp&#xFF0C;sftp&#xFF0C;rsync&#x3002;</p>
+</blockquote>
+<h2 id="ssh&#x5B89;&#x88C5;">ssh&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-bash">yum list installed | grep openssh-server   <span class="hljs-comment"># &#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x5B89;&#x88C5;</span>
+yum install openssh-server       <span class="hljs-comment"># &#x5B89;&#x88C5;</span>
+
+ps <span class="hljs-_">-e</span> | grep sshd     [netstat -an | grep 22]      <span class="hljs-comment"># &#x68C0;&#x67E5;&#x8FDB;&#x7A0B;&#x6216;&#x7AEF;&#x53E3;&#x53F7;</span>
+
+systemctl <span class="hljs-built_in">enable</span> sshd.service   <span class="hljs-comment"># sshd &#x670D;&#x52A1;&#x6DFB;&#x52A0;&#x81F3;&#x81EA;&#x542F;&#x52A8;&#x5217;&#x8868;&#x4E2D;</span>
+systemctl list-unit-files | grep sshd  <span class="hljs-comment">#&#x67E5;&#x770B;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;sshd &#x670D;&#x52A1;&#x81EA;&#x542F;&#x52A8;</span>
+</code></pre>
+<h2 id="ssh-&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;">ssh &#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;</h2>
+<pre><code class="lang-bash">ssh [-p(&#x5C0F;&#x5199;)] root@192.168.137.128   <span class="hljs-comment">#ssh&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;</span>
+
+ssh root@172.25.0.11 touch/root/Desktop/file
+ssh &#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7528;&#x6237;@&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;ip <span class="hljs-built_in">command</span> <span class="hljs-comment">##&#x76F4;&#x63A5;&#x5728;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x8FD0;&#x884C;&#x67D0;&#x6761;&#x547D;&#x4EE4;</span>
+</code></pre>
+<h2 id="ssh&#x914D;&#x7F6E;&#x6587;&#x4EF6;">ssh&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<pre><code class="lang-bash">vim /etc/ssh/sshd_config
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Port 22</td>
+<td style="text-align:left">TCP &#x9ED8;&#x8BA4;&#x7AEF;&#x53E3;&#x4E3A;22&#xFF0C;&#x6700;&#x597D;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x4E00;&#x4E2A;&#x9AD8;&#x4F4D;&#x7AEF;&#x53E3;(TCP&#x7AEF;&#x53E3;&#x8303;&#x56F4;1-65535)</td>
+</tr>
+<tr>
+<td style="text-align:left">PubkeyAuthentication yes</td>
+<td style="text-align:left">&#x5BC6;&#x94A5;&#x8BA4;&#x8BC1;&#x767B;&#x9646; ssh-key</td>
+</tr>
+<tr>
+<td style="text-align:left">AuthorizedKeysFile .ssh/authorized_keys</td>
+<td style="text-align:left">&#x9ED8;&#x8BA4;&#x516C;&#x94A5;&#x5B58;&#x653E;&#x7684;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">PasswordAuthentication no</td>
+<td style="text-align:left">&#x7981;&#x6B62;&#x5BC6;&#x7801;&#x767B;&#x9646;</td>
+</tr>
+<tr>
+<td style="text-align:left">PermitRootLogin no</td>
+<td style="text-align:left">&#x7981;&#x6B62;root&#x8BA4;&#x8BC1;&#x767B;&#x5F55;(&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6700;&#x597D;&#x7981;&#x6B62;root&#x548C;&#x5BC6;&#x7801;&#x767B;&#x9646;)</td>
+</tr>
+<tr>
+<td style="text-align:left">ListenAddress 192.168.137.130</td>
+<td style="text-align:left">&#x9650;&#x5236;ssh&#x76D1;&#x542C;IP&#xFF0C;&#x6709;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#x5B89;&#x5168;&#x7EA7;&#x522B;&#x66F4;&#x9AD8;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x5916;&#x7F51;&#x76F4;&#x63A5;&#x767B;&#x9646;&#xFF0C;&#x53EA;&#x6709;&#x901A;&#x8FC7;&#x5C40;&#x57DF;&#x7F51;&#x624D;&#x80FD;&#x767B;&#x9646;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x673A;&#x623F;&#x91CC;&#x8BBE;&#x7F6E;&#x4E00;&#x53F0;&#x80FD;&#x591F;&#x88AB;&#x5916;&#x7F51;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x4E3B;&#x673A;&#x90FD;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x673A;&#x5668;&#x8FDB;&#x884C;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5373;&#x53EF;</td>
+</tr>
+<tr>
+<td style="text-align:left">StrictModes yes</td>
+<td style="text-align:left">&#x5F53;&#x8FDC;&#x7A0B;&#x7528;&#x6237;&#x7684;&#x79C1;&#x94A5;&#x6539;&#x53D8;&#x65F6;&#x76F4;&#x63A5;&#x62D2;&#x7EDD;&#x8FDE;&#x63A5;</td>
+</tr>
+<tr>
+<td style="text-align:left">MaxAuthTries 6</td>
+<td style="text-align:left">&#x6700;&#x5927;&#x5BC6;&#x7801;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">MaxSessions 10</td>
+<td style="text-align:left">&#x6700;&#x5927;&#x7EC8;&#x7AEF;&#x6570;</td>
+</tr>
+<tr>
+<td style="text-align:left">PermitEmptyPasswords no</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x5141;&#x8BB8;&#x7A7A;&#x5BC6;&#x7801;&#x767B;&#x5F55;(&#x5F88;&#x4E0D;&#x5B89;&#x5168;)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash">systemctl restart sshd     <span class="hljs-comment">#&#x914D;&#x7F6E;&#x540E;&#x9700;&#x91CD;&#x542F;ssh&#x670D;&#x52A1;</span>
+</code></pre>
+<h2 id="ssh-key-&#x5B89;&#x5168;&#x5BC6;&#x94A5;">ssh-key &#x5B89;&#x5168;&#x5BC6;&#x94A5;</h2>
+<pre><code class="lang-bash">[root@localhost ~]<span class="hljs-comment"># ssh-keygen</span>
+
+[root@localhost ~]<span class="hljs-comment"># ssh-keygen[root@localhost ~]# ssh-keygen -t rsa -b 2048        -P &apos;&apos; &#x751F;&#x6210;&#x516C;&#x79C1;&#x94A5;&#x5BF9;&#x3002;</span>
+-t &#x6307;&#x5B9A;&#x52A0;&#x5BC6;&#x7C7B;&#x578B;&#xFF08;rsa/dsa)
+-b &#x6307;&#x5B9A;&#x5BC6;&#x94A5;&#x5BF9;&#x52A0;&#x5BC6;&#x957F;&#x5EA6;&#xFF08;&#x6700;&#x597D;&#x9009;1024&#x4F4D;&#x4EE5;&#x4E0A;&#xFF0C;&#x5982;2048&#xFF09;
+
+&#x5176;&#x4E2D;-P&#x8868;&#x793A;&#x5BC6;&#x7801;&#xFF0C;-P <span class="hljs-string">&apos;&apos;</span> &#x5C31;&#x8868;&#x793A;&#x7A7A;&#x5BC6;&#x7801;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;-P&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x8981;&#x4E09;&#x8F66;&#x56DE;&#x8F66;&#xFF0C;&#x7528;-P&#x5C31;&#x4E00;&#x6B21;&#x56DE;&#x8F66;, -t&#x8868;&#x793A;&#x5BC6;&#x94A5;&#x7684;&#x52A0;&#x5BC6;&#x7C7B;&#x578B;,&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7684;&#x52A0;&#x5BC6;&#x7C7B;&#x578B;&#x6709;&#xFF1A;dsa, ecdsa, ed25519, rsa, rsa1
+[root@localhost .ssh]<span class="hljs-comment"># ls /root/.ssh</span>
+id_rsa  id_rsa.pub
+[root@localhost .ssh]<span class="hljs-comment"># ssh-copy-id -i lxj@192.68.10.10    &#x6B64;&#x6761;&#x547D;&#x4EE4;,&#x4E0A;&#x4F20;&#x516C;&#x94A5;&#xFF0C;&#x4E0A;&#x4F20;&#x5230; &#x670D;&#x52A1;&#x5668;/etc/.ssh/&#x76EE;&#x5F55;&#x4E0B;</span>
+[root@localhost .ssh]<span class="hljs-comment"># scp /root/.ssh/id_rsa.pub root@192.168.10.10:/root/.ssh/authorized_keys   &#x6216;&#x8005;&#x624B;&#x52A8;SCP&#x62F7;&#x8D1D;&#x5230;&#x76EE;&#x6807;&#x4E3B;&#x673A;.</span>
+
+authorized_keys&#x7684;&#x6743;&#x9650;&#x8981;&#x662F;600!!!
+[root@localhost ~]<span class="hljs-comment"># chmod 600 /root/.ssh/authorized_keys</span>
+[root@localhost .ssh]<span class="hljs-comment"># ssh-copy-id @192.68.10.10</span>
+
+[root@localhost .ssh]<span class="hljs-comment"># vim /etc/ssh/sshd_config    &#x8BBE;&#x7F6E;&#x53EA;&#x5141;&#x8BB8;&#x5BC6;&#x94A5;&#x9A8C;&#x8BC1;,&#x7136;&#x540E;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;</span>
+78 PasswordAuthentication no
+[root@localhost .ssh]<span class="hljs-comment"># systemctl restart sshd</span>
+
+
+id_rsa &#x79C1;&#x94A5; &#x9700;&#x8981;&#x4FDD;&#x5BC6;
+id_rsa.pub &#x516C;&#x94A5;,&#x4E0A;&#x4F20;&#x670D;&#x52A1;&#x5668;
+</code></pre>
+<ul>
+<li style="list-style: none"><input type="checkbox" disabled="disabled"> TODO</li>
+</ul>
+<h2 id="&#x8BBF;&#x95EE;&#x63A7;&#x5236;">&#x8BBF;&#x95EE;&#x63A7;&#x5236;</h2>
+<pre><code class="lang-bash"><span class="hljs-comment">#&#x63A7;&#x5236;ssh&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;</span>
+vim /etc/hosts.deny
+
+
+vim /etc/hosts.allow
+sshd:172.25.254.250  <span class="hljs-comment">##&#x5141;&#x8BB8;250&#x4E3B;&#x673A;&#x94FE;&#x63A5;sshd</span>
+sshd:172.25.254.250&#xFF0C; 172.25.254.180 <span class="hljs-comment">##&#x5141;&#x8BB8;250&#x548C;180&#x94FE;&#x63A5;</span>
+
+sshd:ALL EXCEPT 172.25.254.200 <span class="hljs-comment">##&#x53EA;&#x4E0D;&#x5141;&#x8BB8;200&#x94FE;&#x63A5;sshd</span>
+
+
+<span class="hljs-comment">#ssh&#x767B;&#x9646;&#x63D0;&#x793A;&#x4FEE;&#x6539;&#x8BE5;</span>
+vim /etc/motd <span class="hljs-comment">##&#x663E;&#x793A;&#x767B;&#x9646;&#x540E;&#x5B57;&#x7B26;</span>
+</code></pre>
+<ol>
+<li>&#x5BC6;&#x94A5;&#x5BF9;&#x9A8C;&#x8BC1;&#xFF1A;<ol>
+<li>&#x8FDE;&#x63A5;&#x524D;&#xFF0C;&#x5C06;&#x5BA2;&#x6237;&#x673A;client&#x516C;&#x94A5;&#x653E;&#x5728;&#x670D;&#x52A1;&#x5668;server&#x4E0A;</li>
+<li>&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;client&#x5C06;&#x7528;&#x516C;&#x94A5;&#x53BB;&#x8BF7;&#x6C42;server&#xFF0C;server&#x4F1A;&#x8981;&#x6C42;client&#x63A5;&#x6536;server&#x81EA;&#x5DF1;&#x7684;&#x516C;&#x94A5;(server&#x5BC6;&#x94A5;&#x5BF9;&#x81EA;&#x52A8;&#x751F;&#x6210;)</li>
+<li>&#x7B2C;&#x4E00;&#x6B21;&#x8FDE;&#x63A5;&#x65F6;&#xFF0C;server&#x63A5;&#x6536;client&#x53D1;&#x6765;&#x7684;&#x516C;&#x94A5;&#xFF0C;&#x5E76;&#x9A8C;&#x8BC1;&#x672C;&#x5730;&#x5B58;&#x653E;&#x7684;&#x516C;&#x94A5;&#x548C;&#x63A5;&#x6536;&#x7684;client&#x516C;&#x94A5;&#x662F;&#x5426;&#x4E00;&#x81F4;&#xFF0C;&#x82E5;&#x4E0D;&#x4E00;&#x81F4;&#x5219;&#x76F4;&#x63A5;&#x62D2;&#x63A5;&#xFF0C;&#x82E5;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x7528;client&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x4E00;&#x6BB5;&#x4FE1;&#x606F;&#xFF0C;&#x53D1;&#x7ED9;client</li>
+<li>client&#x6536;&#x5230;&#x52A0;&#x5BC6;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x4F7F;&#x7528;client&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#xFF0C;&#x5E76;&#x7528;server&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x4FE1;&#x606F;&#xFF0C;&#x53D1;&#x7ED9;server</li>
+<li>server&#x6536;&#x5230;&#x6570;&#x636E;&#x5305;&#x540E;&#x4F7F;&#x7528;server&#x79C1;&#x94A5;&#x8FDB;&#x884C;&#x89E3;&#x5BC6;&#xFF0C;&#x82E5;&#x89E3;&#x5BC6;&#x6210;&#x529F;&#xFF0C;&#x5185;&#x5BB9;&#x548C;&#x4E4B;&#x524D;&#x53D1;&#x9001;&#x7684;&#x4FE1;&#x606F;&#x4E00;&#x81F4;&#xFF0C;&#x5219;&#x5EFA;&#x7ACB;&#x4E86;&#x5B89;&#x5168;&#x7684;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;</li>
+</ol>
+</li>
+</ol>
+<pre><code>~~~
+centos6.x
+#&#x4E34;&#x65F6;&#x5173;&#x95ED;
+iptables -F    #&#x6E05;&#x7A7A;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;
+setenforce 0   #&#x4E34;&#x65F6;&#x5173;&#x95ED;SELinux
+
+~~~
+
+~~~
+
+~~~
+
+#&#x6C38;&#x4E45;&#x5173;&#x95ED;
+chkconfig iptables off       #&#x8BBE;&#x7F6E;&#x9632;&#x706B;&#x5899;&#x5F00;&#x673A;&#x4E0D;&#x81EA;&#x542F;&#x52A8;
+sed -i &apos;7s/enforcing/disabled/&apos; /etc/selinux/config  #&#x6C38;&#x4E45;&#x5173;&#x95ED;SELinux
+# &#x9700;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;&#x624D;&#x80FD;&#x751F;&#x6548;
+~~~
+</code></pre><h1 id="scp-&#x8FDC;&#x7A0B;&#x4F20;&#x8F93;">SCP &#x8FDC;&#x7A0B;&#x4F20;&#x8F93;</h1>
+<pre><code class="lang-bash">scp&#xFF08;secure copy&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;SSH&#x534F;&#x8BAE;&#x5728;&#x7F51;&#x7EDC;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x5B89;&#x5168;&#x4F20;&#x8F93;&#x7684;&#x547D;&#x4EE4;
+-v       &#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x7684;&#x8FDE;&#x63A5;&#x8FDB;&#x5EA6;
+-P(&#x5927;&#x5199;)       &#x6307;&#x5B9A;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;sshd&#x7AEF;&#x53E3;&#x53F7;
+-r       &#x7528;&#x4E8E;&#x4F20;&#x9001;&#x6587;&#x4EF6;&#x5939;/&#x76EE;&#x5F55;
+-6       &#x4F7F;&#x7528;IPv6&#x534F;&#x8BAE;
+
+scp [&#x53C2;&#x6570;] &#x672C;&#x5730;&#x6587;&#x4EF6; &#x8FDC;&#x7A0B;&#x5E10;&#x6237;@&#x8FDC;&#x7A0B;IP&#x5730;&#x5740;:&#x8FDC;&#x7A0B;&#x76EE;&#x5F55;   &#x4E0A;&#x4F20;&#x5230;&#x8FDC;&#x7A0B;
+[root@linuxprobe ~]<span class="hljs-comment"># scp /root/readme.txt lxj@192.168.10.20:/home</span>
+
+scp [&#x53C2;&#x6570;] &#x8FDC;&#x7A0B;&#x7528;&#x6237;@&#x8FDC;&#x7A0B;IP&#x5730;&#x5740;:&#x8FDC;&#x7A0B;&#x6587;&#x4EF6; &#x672C;&#x5730;&#x76EE;&#x5F55;   &#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x4E3B;&#x673A;
+[root@linuxprobe ~]<span class="hljs-comment"># scp root@192.168.10.20:/etc/redhat-release /root</span>
+
+SCP &#x4E0D;&#x9002;&#x5408;&#x7528;&#x6765;&#x505A;&#x5907;&#x4EFD;,&#x6587;&#x4EF6;&#x6743;&#x9650;,&#x65E5;&#x671F;&#x5C5E;&#x6027;&#x7B49;&#x90FD;&#x4F1A;&#x53D1;&#x751F;&#x6539;&#x53D8;
+</code></pre>
+<ul>
+<li style="list-style: none"><input type="checkbox" disabled="disabled"> TODO</li>
+</ul>
+<h1 id="sftp">sftp</h1>
+<h1 id="rsync">rsync</h1>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="RPM工具及YUM仓库.html" class="navigation navigation-prev " aria-label="Previous page: RPM工具及YUM仓库">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="TCP IP.html" class="navigation navigation-next " aria-label="Next page: TCP IP">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SSH 远程服务及SCP","level":"2.1.3","depth":2,"next":{"title":"TCP IP","level":"2.1.4","depth":2,"path":"Linux/Basics/TCP IP.md","ref":"Linux/Basics/TCP IP.md","articles":[]},"previous":{"title":"RPM工具及YUM仓库","level":"2.1.2","depth":2,"path":"Linux/Basics/RPM工具及YUM仓库.md","ref":"Linux/Basics/RPM工具及YUM仓库.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Linux/Basics/SSH 远程服务及SCP.md","mtime":"2021-01-06T04:14:37.053Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

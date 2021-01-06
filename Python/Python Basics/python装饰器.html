@@ -1,0 +1,1341 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python装饰器 · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="内存管理.html" />
+    
+    
+    <link rel="prev" href="python收集小知识.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../Linux/Basics/DHCP.html">
+            
+                <a href="../../Linux/Basics/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../Linux/Basics/RPM工具及YUM仓库.html">
+            
+                <a href="../../Linux/Basics/RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../Linux/Basics/SSH 远程服务及SCP.html">
+            
+                <a href="../../Linux/Basics/SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../Linux/Basics/TCP IP.html">
+            
+                <a href="../../Linux/Basics/TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../Linux/Basics/文件目录管理.html">
+            
+                <a href="../../Linux/Basics/文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../Linux/Basics/用户身份及权限.html">
+            
+                <a href="../../Linux/Basics/用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../../Linux/Basics/磁盘管理与文件系统.html">
+            
+                <a href="../../Linux/Basics/磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../../Linux/Basics/网络服务管理.html">
+            
+                <a href="../../Linux/Basics/网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../../Linux/DevOps/Ansible/ansible.html">
+            
+                <a href="../../Linux/DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../../Linux/DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../../Linux/DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../../Linux/DevOps/Git相关/Git使用.html">
+            
+                <a href="../../Linux/DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../Linux/DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../../Linux/DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../Linux/Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../../Linux/Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../Linux/Environment/python环境安装.html">
+            
+                <a href="../../Linux/Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../Linux/Others/Untitled.html">
+            
+                <a href="../../Linux/Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../Linux/Others/markdown语法.html">
+            
+                <a href="../../Linux/Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../../Linux/Others/vimium快捷键.html">
+            
+                <a href="../../Linux/Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="../../Linux/Services/Apache web服务器.html">
+            
+                <a href="../../Linux/Services/Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="../../Linux/Services/Crontab 定时任务.html">
+            
+                <a href="../../Linux/Services/Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="../../Linux/Services/DNS 域名解析服务.html">
+            
+                <a href="../../Linux/Services/DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="../../Linux/Services/FTP 文件传输服务器.html">
+            
+                <a href="../../Linux/Services/FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="../../Linux/Services/Firewalld 防火墙.html">
+            
+                <a href="../../Linux/Services/Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="../../Linux/Services/LNMP 架构网站搭建.html">
+            
+                <a href="../../Linux/Services/LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="../../Linux/Services/MariaDB MySQL 服务.html">
+            
+                <a href="../../Linux/Services/MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="../../Linux/Services/Rsync 同步服务.html">
+            
+                <a href="../../Linux/Services/Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../Modules/Flask/flask博客.html">
+            
+                <a href="../Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../Modules/Untitled.html">
+            
+                <a href="../Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../Modules/celery/任务回调.html">
+            
+                <a href="../Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../Modules/longging 日志模块.html">
+            
+                <a href="../Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../Modules/内置模块.html">
+            
+                <a href="../Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="python收集小知识.html">
+            
+                <a href="python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2.2" data-path="python装饰器.html">
+            
+                <a href="python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="内存管理.html">
+            
+                <a href="内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="函数编程.html">
+            
+                <a href="函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="并发编程.html">
+            
+                <a href="并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="数据编码和处理.html">
+            
+                <a href="数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="类与对象.html">
+            
+                <a href="类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="网络编程.html">
+            
+                <a href="网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../Python Wheel/Django发送Email.html">
+            
+                <a href="../Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../Python Wheel/python等环境安装.html">
+            
+                <a href="../Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Python装饰器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#&#x88C5;&#x9970;&#x5668;ddcorator">&#x88C5;&#x9970;&#x5668;Ddcorator</a><ul>
+<li><a href="#&#x95ED;&#x5305;">&#x95ED;&#x5305;</a></li>
+<li><a href="#&#x591A;&#x91CD;&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x7528;">&#x591A;&#x91CD;&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x7528;</a></li>
+<li><a href="#&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#xFF09;">&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#xFF09;</a></li>
+</ul>
+</li>
+<li><a href="#&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;&#xFF1A;">&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;&#xFF1A;</a><ul>
+<li><a href="#&#x88C5;&#x9970;&#x542B;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">&#x88C5;&#x9970;&#x542B;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</a></li>
+<li><a href="#&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#x7B80;&#x5355;&#x539F;&#x7406;">&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#x7B80;&#x5355;&#x539F;&#x7406;</a></li>
+<li><a href="#&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;-&#x4E00;">&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x4E00;</a></li>
+<li><a href="#&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;">&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</a></li>
+<li><a href="#3&#x5C42;&#x88C5;&#x9970;&#x5668;">3&#x5C42;&#x88C5;&#x9970;&#x5668;</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<p>&#x53C2;&#x8003;&#xFF1A;<a href="https://mp.weixin.qq.com/s/XTHZ-K1yDNPIoejNFvk6rw" target="_blank">https://mp.weixin.qq.com/s/XTHZ-K1yDNPIoejNFvk6rw</a></p>
+<p><a href="https://iswbm.com/47.html" target="_blank">https://iswbm.com/47.html</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&amp;mid=2652569579&amp;idx=1&amp;sn=bc432ac7e7b0013b27cf4712080c328f&amp;chksm=8464d7a1b3135eb7e89b83241cd844200e3ee724ed3e6e2e11472dabbd929ac24c4fe44a044b&amp;mpshare=1&amp;scene=1&amp;srcid=#rd" target="_blank">https://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&amp;mid=2652569579&amp;idx=1&amp;sn=bc432ac7e7b0013b27cf4712080c328f&amp;chksm=8464d7a1b3135eb7e89b83241cd844200e3ee724ed3e6e2e11472dabbd929ac24c4fe44a044b&amp;mpshare=1&amp;scene=1&amp;srcid=#rd</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&amp;mid=2652569441&amp;idx=1&amp;sn=aaf6b48116aad898b07e8e8085b0d154&amp;chksm=8464d72bb3135e3daa964ff1722b43c00fa624c3d7bd5561897ca477d908b8cf5f7c8997e67f&amp;mpshare=1&amp;scene=1&amp;srcid=#rd" target="_blank">https://mp.weixin.qq.com/s?__biz=MzA4MjEyNTA5Mw==&amp;mid=2652569441&amp;idx=1&amp;sn=aaf6b48116aad898b07e8e8085b0d154&amp;chksm=8464d72bb3135e3daa964ff1722b43c00fa624c3d7bd5561897ca477d908b8cf5f7c8997e67f&amp;mpshare=1&amp;scene=1&amp;srcid=#rd</a></p>
+<p><a href="https://www.cnblogs.com/jonathan1314/p/6391115.html" target="_blank"><strong>Python&#x81EA;&#x52A8;&#x5316;&#x5F00;&#x53D1; - &#x88C5;&#x9970;&#x5668;</strong></a></p>
+<h3 id="&#x88C5;&#x9970;&#x5668;ddcorator">&#x88C5;&#x9970;&#x5668;Ddcorator</h3>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func_out</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func_in</span><span class="hljs-params">(*args,**kwargs)</span>:</span>
+        <span class="hljs-comment"># do something</span>
+        <span class="hljs-keyword">return</span> func(*args,**kwargs)
+       <span class="hljs-keyword">return</span> func_in
+
+<span class="hljs-meta">@funcOut</span>
+<span class="hljs-comment"># test = func_out(test)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(*args)</span>:</span>
+    <span class="hljs-keyword">return</span> *args
+</code></pre>
+<h4 id="&#x95ED;&#x5305;">&#x95ED;&#x5305;</h4>
+<p>&#x7528;&#x9014;:&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x4FEE;&#x6539;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x524D;&#x63D0;&#x4E0B;,&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;,&#x5982;&#x6DFB;&#x52A0;&#x65E5;&#x5FD7;&#x529F;&#x80FD;</p>
+<p>&#x53EF;&#x5C06;&#x5355;&#x65B9;&#x6CD5;&#x7684;&#x7C7B;&#x8F6C;&#x6362;&#x4E3A;&#x51FD;&#x6570;</p>
+<blockquote>
+<ol>
+<li><strong>&#x8981;&#x6709;&#x51FD;&#x6570;&#x7684;&#x5D4C;&#x5957;</strong></li>
+<li><strong>&#x5185;&#x90E8;&#x51FD;&#x6570;&#x8981;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x7684;&#x53D8;&#x91CF;</strong></li>
+<li><strong>&#x5916;&#x90E8;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x6709;&#x8FD4;&#x56DE;&#x503C;,&#x8FD4;&#x56DE;&#x5185;&#x90E8;&#x51FD;&#x6570;&#x540D;</strong></li>
+</ol>
+</blockquote>
+<h4 id="&#x591A;&#x91CD;&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x7528;">&#x591A;&#x91CD;&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x7528;</h4>
+<p>&#x6328;&#x7740;&#x529F;&#x80FD;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x4E0B;&#x81F3;&#x4E0A;&#x4F9D;&#x6B21;&#x88C5;&#x9970;</p>
+<p>&#x5E76;&#x4E14;&#x6267;&#x884C;&#x4F9D;&#x6B21;&#x5148;&#x6267;&#x884C;&#x88C5;&#x9970;&#x5668;&#x5916;&#x5C42;&#x51FD;&#x6570;&#xFF0C;&#x540E;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x5185;&#x5C42;&#x51FD;&#x6570;</p>
+<h4 id="&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#xFF09;">&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF08;&#x4E00;&#x822C;&#x4E0D;&#x7528;&#xFF09;</h4>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestDecorator</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,func)</span>:</span>
+        self.func = func
+        print(<span class="hljs-string">&apos;class - test&apos;</span>)
+        self.func()   <span class="hljs-comment"># &#x8C03;&#x7528;</span>
+
+    <span class="hljs-comment"># &#x89E3;&#x51B3;&#x62A5;&#x9519; TypeError: &apos;NoneType&apos; object is not callable</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__call__</span><span class="hljs-params">(self,*args,**kwargs)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+
+
+<span class="hljs-meta">@TestDecorator        </span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;test&apos;</span>)
+</code></pre>
+<h3 id="&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;&#xFF1A;">&#x51E0;&#x79CD;&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;&#xFF1A;</h3>
+<h4 id="&#x88C5;&#x9970;&#x542B;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;">&#x88C5;&#x9970;&#x542B;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x51FD;&#x6570;</h4>
+<pre><code class="lang-python">
+<span class="hljs-keyword">from</span> functools <span class="hljs-keyword">import</span> wraps
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mywork</span><span class="hljs-params">(func)</span>:</span>
+    task_name = func.__name__   <span class="hljs-comment">#&#x6B64;&#x5904;&#x4E3A;&#x83B7;&#x5F97;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x540D; a3</span>
+
+<span class="hljs-meta">    @warps(func)     #&#x9632;&#x6B62;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x7684;&#x51FD;&#x6570;&#x540D;&#x88AB;&#x6539;&#x53D8;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner</span><span class="hljs-params">(*args,**kwargs)</span>:</span>
+        print(<span class="hljs-string">&quot;&#x6DFB;&#x52A0;1&quot;</span>)
+        aa=func(*args,**kwargs)
+        print(<span class="hljs-string">&quot;&#x6DFB;&#x52A0;2&quot;</span>)
+        <span class="hljs-keyword">return</span> aa
+    <span class="hljs-keyword">return</span> inner
+<span class="hljs-meta">@mywork</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a3</span><span class="hljs-params">(arg1,arg2)</span>:</span>
+    print(<span class="hljs-string">&apos;i am zhangsan&apos;</span>,arg1,arg2)
+    li=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]
+    <span class="hljs-keyword">return</span> li   <span class="hljs-comment">#&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5217;&#x8868;</span>
+
+list=a3(<span class="hljs-string">&quot;&#x53C2;&#x6570;1&quot;</span>,<span class="hljs-string">&quot;&#x53C2;&#x6570;2&quot;</span>)    <span class="hljs-comment">#list&#x7B49;&#x4E8E;inner&#x7684;&#x8FD4;&#x56DE;&#x503C;</span>
+print(list)
+<span class="hljs-comment">#li&#x5217;&#x8868;&#x662F;a3&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x7ED9;&#x5728;inner&#x51FD;&#x6570;&#x91CC;&#x6267;&#x884C;&#x7684;func()&#x8D4B;&#x7ED9;aa&#xFF0C;&#x5728;&#x901A;&#x8FC7;inner&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x80FD;&#x62FF;&#x5230;&#x5217;&#x8868;</span>
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C;</span>
+&#x6DFB;&#x52A0;<span class="hljs-number">1</span>
+i am zhangsan &#x53C2;&#x6570;<span class="hljs-number">1</span> &#x53C2;&#x6570;<span class="hljs-number">2</span>
+&#x6DFB;&#x52A0;<span class="hljs-number">2</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<h4 id="&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#x7B80;&#x5355;&#x539F;&#x7406;">&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x9A8C;&#x8BC1;&#x7B80;&#x5355;&#x539F;&#x7406;</h4>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">login</span><span class="hljs-params">()</span>:</span>
+    name =input(<span class="hljs-string">&quot;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;&quot;</span>)
+    <span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;zhangsan&quot;</span>:
+        <span class="hljs-keyword">return</span>  <span class="hljs-keyword">True</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">mywork</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner</span><span class="hljs-params">(*args,**kwargs)</span>:</span>
+        lo_login = login()
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> lo_login:    <span class="hljs-comment">#&#x5982;&#x679C;login()&#x8FD4;&#x56DE;&#x7684;&#x662F;False</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x7528;&#x6237;&#x540D;&#x9519;&#x8BEF;!&quot;</span>
+        aa=func(*args,**kwargs)
+        <span class="hljs-keyword">return</span> aa
+    <span class="hljs-keyword">return</span> inner
+<span class="hljs-meta">@mywork</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a3</span><span class="hljs-params">(arg1,arg2)</span>:</span>
+    print(<span class="hljs-string">&apos;i am zhangsan&apos;</span>,arg1,arg2)
+    li=[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]
+    <span class="hljs-keyword">return</span> li
+list=a3(<span class="hljs-string">&quot;&#x53C2;&#x6570;1&quot;</span>,<span class="hljs-string">&quot;&#x53C2;&#x6570;2&quot;</span>)    <span class="hljs-comment">#list&#x7B49;&#x4E8E;inner&#x7684;&#x8FD4;&#x56DE;&#x503C;</span>
+print(list)
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E00;</span>
+&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;zs
+&#x7528;&#x6237;&#x540D;&#x9519;&#x8BEF;!
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E8C;&#xFF1A;</span>
+&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#xFF1A;zhangsan
+i am zhangsan &#x53C2;&#x6570;<span class="hljs-number">1</span> &#x53C2;&#x6570;<span class="hljs-number">2</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<h4 id="&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;-&#x4E00;">&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x4E00;</h4>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newwork1</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner</span><span class="hljs-params">()</span>:</span>
+        print(<span class="hljs-string">&quot;newwork1&#x524D;&quot;</span>)
+        func()
+        print(<span class="hljs-string">&quot;newwork1&#x540E;&quot;</span>)
+    <span class="hljs-keyword">return</span> inner
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">newwork2</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner</span><span class="hljs-params">()</span>:</span>
+        print(<span class="hljs-string">&quot;newwork2&#x524D;&quot;</span>)
+        func()
+        print(<span class="hljs-string">&quot;newwork2&#x540E;&quot;</span>)
+    <span class="hljs-keyword">return</span> inner
+
+<span class="hljs-meta">@newwork2</span>
+<span class="hljs-meta">@newwork1</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f1</span><span class="hljs-params">()</span>:</span>
+    prin( <span class="hljs-string">&apos;i am zhangsan&apos;</span>)
+
+f1()
+
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</span>
+newwork2&#x524D;
+newwork1&#x524D;
+i am zhangsan
+newwork1&#x540E;
+newwork2&#x540E;
+</code></pre>
+<h4 id="&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;">&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x88C5;&#x9970;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</h4>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper1</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner1</span><span class="hljs-params">()</span>:</span>
+        print(<span class="hljs-string">&apos;wrapper1 ,before func&apos;</span>)
+        ret = func()
+        print(<span class="hljs-string">&apos;wrapper1 ,after func&apos;</span>)
+        <span class="hljs-keyword">return</span> ret
+    <span class="hljs-keyword">return</span> inner1
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper2</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner2</span><span class="hljs-params">()</span>:</span>
+        print(<span class="hljs-string">&apos;wrapper2 ,before func&apos;</span>)
+        ret = func()
+        print(<span class="hljs-string">&apos;wrapper2 ,after func&apos;</span>)
+        <span class="hljs-keyword">return</span> ret
+    <span class="hljs-keyword">return</span> inner2
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper3</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inner3</span><span class="hljs-params">()</span>:</span>
+        print(<span class="hljs-string">&apos;wrapper3 ,before func&apos;</span>)
+        ret = func()
+        print(<span class="hljs-string">&apos;wrapper3 ,after func&apos;</span>)
+        <span class="hljs-keyword">return</span> ret
+    <span class="hljs-keyword">return</span> inner3
+
+<span class="hljs-meta">@wrapper3</span>
+<span class="hljs-meta">@wrapper2</span>
+<span class="hljs-meta">@wrapper1</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">()</span>:</span>
+    print(<span class="hljs-string">&apos;in f&apos;</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;i am zhangsan&apos;</span>
+
+print(f())
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</span>
+wrapper3 ,before func
+wrapper2 ,before func
+wrapper1 ,before func
+<span class="hljs-keyword">in</span> f
+wrapper1 ,after func
+wrapper2 ,after func
+wrapper3 ,after func
+i am zhangsan
+</code></pre>
+<h4 id="3&#x5C42;&#x88C5;&#x9970;&#x5668;">3&#x5C42;&#x88C5;&#x9970;&#x5668;</h4>
+<pre><code class="lang-python">
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Filter</span><span class="hljs-params">(a1,a2)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">outer</span><span class="hljs-params">(func)</span>:</span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span><span class="hljs-params">(request,kargs)</span>:</span>
+            print(a1)
+            result=func(request,kargs)
+            print(a2)
+            <span class="hljs-keyword">return</span> result
+        <span class="hljs-keyword">return</span> wrapper
+    <span class="hljs-keyword">return</span>  outer
+aa=<span class="hljs-number">11</span>
+bb=<span class="hljs-number">22</span>
+<span class="hljs-meta">@Filter(aa,bb)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Index</span><span class="hljs-params">(request,kargs)</span>:</span>
+    print(request,kargs)
+
+Index(<span class="hljs-string">&quot;zhangsan&quot;</span>,<span class="hljs-string">&quot;lisi&quot;</span>)
+<span class="hljs-comment">#@Filter(aa,bb)&#x4F1A;&#x5148;&#x6267;&#x884C;Filter(aa,bb)&#x51FD;&#x6570;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x8FD4;&#x56DE;&#x503C;outer&#x540E;&#x62FC;&#x63A5;&#x6210;@outer&#xFF0C;&#x4E4B;&#x540E;&#x5C31;&#x53D8;&#x6210;&#x666E;&#x901A;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4E86;</span>
+<span class="hljs-comment">#wrapper&#x51FD;&#x6570;&#x5185;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;a1,a2,request,kargs 4&#x4E2A;&#x53C2;&#x6570;</span>
+
+<span class="hljs-comment">#&#x8F93;&#x51FA;&#x7ED3;&#x679C; </span>
+<span class="hljs-number">11</span>
+zhangsan lisi
+<span class="hljs-number">22</span>
+</code></pre>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="python收集小知识.html" class="navigation navigation-prev " aria-label="Previous page: Python收集小知识">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="内存管理.html" class="navigation navigation-next " aria-label="Next page: 内存管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python装饰器","level":"4.2.2","depth":2,"next":{"title":"内存管理","level":"4.2.3","depth":2,"path":"Python/Python Basics/内存管理.md","ref":"Python/Python Basics/内存管理.md","articles":[]},"previous":{"title":"Python收集小知识","level":"4.2.1","depth":2,"path":"Python/Python Basics/python收集小知识.md","ref":"Python/Python Basics/python收集小知识.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Python/Python Basics/python装饰器.md","mtime":"2021-01-06T04:10:26.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

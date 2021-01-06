@@ -1,0 +1,658 @@
+<!-- toc -->
+
+[toc]
+<!-- toc -->
+
+# python发送邮件 SMTP模块
+
+
+
+参考 <https://www.cnblogs.com/czalinux/p/7891905.html#/c/subject/p/7891905.html>
+
+
+
+《Python自动化运维  技术与最佳实践》 2.3.1
+
+``` bash
+7634...QQy邮箱的授权
+POP3/SMTP服务 (如何使用 Foxmai
+iazwopsfkoiybbhc
+
+#成功开启Exchange服务,在第三方客户端登录时，密码框请输入以下授权码：
+xdbmnalomnysbffj
+
+#成功开启CardDav/CalDav服务,在第三方客户端登录时，密码框请输入以下授权码：
+uyseadzbnmfnbbfg
+```
+
+
+
+
+
+``` python
+
+
+import smtplib
+#smtpobj = smtplib.SMTP([25,220.112.231.101])
+
+#SMTP.sendmail(763468203@qq.com,xjl4713@gmail.com, msg[, mail_options, rcpt_options])
+
+from email.mime.text import MIMEText
+from email.header import Header
+
+
+mail_host = 'smtp.qq.com'  #465/587
+mail_user = 'lxianjin@foxmail.com'
+mail_pass = 'xtbgndxomcqxbfhf'
+
+sender = 'lxianjin@foxmail.com'
+receivers = ['2772661063@qq.com']
+message = MIMEText('Python text', 'plain', 'utf-8')
+message['From'] = Header('caoniao', 'utf-8')  
+message['To'] = Header('ceshi', 'utf-8')
+
+subject = 'pthon smtp youjianceshi'
+message['Subject'] = Header(subject, 'utf-8')
+
+try:
+    smtpObj = smtplib.SMTP()
+    smtpObj.connect(mail_host, 465)
+    smtpObj.login(mail_user,mail_pass)
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print('success')
+except smtplib.SMTPException:
+    print('error')
+```
+
+
+
+## 发送普通文本邮件
+
+``` python
+import smtplib
+from email.mime.text import MIMEText
+mail_user="xxxx@126.com"    #发送邮件的邮箱
+mail_pass="xxxxxxx"   #密码，口令
+mailto_list="xxxxx@qq.com"   #接受邮件的邮箱
+mail_host="smtp.126.com"  #设置服务器 例：smtp.126.com
+
+strstr='你好' #内容
+msg = MIMEText(strstr,'plain','utf-8')  #邮件类型设置为plain
+msg['Subject'] = "主题" #主题
+msg['From'] = mail_user
+msg['To'] = mailto_list
+#邮件中文如果显示乱码，可以加上下面两句
+msg["Accept-Language"]="zh-CN"
+msg["Accept-Charset"]="ISO-8859-1,utf-8"
+
+server = smtplib.SMTP()
+server.connect(mail_host)   #连接smtp邮件服务器
+server.login(mail_user,mail_pass)   #登录
+server.sendmail(mail_user, mailto_list, msg.as_string())      #发送
+server.close()   #关闭
+```
+
+
+
+## HTML格式邮件
+
+``` python
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+mail_user="xxxxxxx@126.com"    #发送邮件的邮箱
+mail_pass="xxxxxx"   #口令
+mailto_list="xxxxxx@qq.com"  #接收邮件的邮箱
+to_list=[mailto_list,]
+mail_host="smtp.126.com"  #设置服务器
+
+msg = MIMEMultipart()
+msg['Subject'] = "主题" #主题
+msg['From'] = mail_user
+msg['To'] = mailto_list
+#正文
+#<img src="cid:image1">为图片显示位置
+strstr="""
+<html>
+<head>正文</head>
+<body>
+<h1>Hello</h1>
+<h2>你们好</h2>
+</body>
+</html>
+"""
+htm=MIMEText(strstr,'html','utf-8')       #邮件类型设置为html
+msg.attach(htm)
+
+server = smtplib.SMTP()
+server.connect(mail_host)   #连接smtp邮件服务器
+server.login(mail_user,mail_pass)   #登录
+server.sendmail(mail_user, to_list, msg.as_string())      #发送
+server.close()   #关闭
+```
+
+
+
+
+
+
+
+## Pingan 发邮件示例
+
+``` python
+
+
+#导入发送邮件模块
+from email.mime.text import MIMEText
+import smtplib
+import json
+import datetime
+from celery import Celery
+from celery import platforms
+import requests
+#导入配置文件
+from config import setting
+#发送邮箱配置
+smtp = setting.smtp
+user = setting.user
+passwd = setting.passwd
+#此处省略……
+#@celery.task
+def sendMail(mail):
+    ''' to_list 接收者邮件，每个邮件地址用","分隔，str 格式
+    subuect 邮件主题，str 格式
+    context 邮件内容，str 格式
+    ''' 
+    to_list = mail.get('to_list')
+    subject = mail.get('subject')
+    context = mail.get('context')
+    msg = MIMEText(context,'html','utf-8')
+    msg['Subject'] = subject
+    msg['From'] = "linux 系统运维<%s>" % user
+    to_list = list(to_list.split(','))
+    msg['To'] = ",".join((to_list))
+    try:
+        s = smtplib.SMTP()
+        s.connect(smtp)
+        s.login(user,passwd)
+        s.sendmail(user,to_list,msg.as_string())
+        s.close()
+        return json.dumps({"redid":0,"redmsg":"发送成功"})
+    except Exception as e:
+        print('Error: %s' % e)
+        return json.dumps({"redid":-1,"redmsg":"发送失败"})
+
+#在实际项目中调用此方法，做异步邮箱发送，发送后不需要等待返回的结果
+
+#/usr/bin/env python
+#coding:utf-8
+#from common.tasks import sendMail
+#sendMail.delay(dict(to_list='xxxxxx@qq.com',subject='测试邮件',context='测试'))
+```
+
+
+
+
+
+## 其他
+
+``` python
+
+
+# 将数据储存在csv格式的表格里面
+# import csv
+# csvFile = open("./file/text.csv", 'w+')
+# try:
+#     writer = csv.writer(csvFile)
+#     writer.writerow(('numbere', 'number plus 2', 'number times 2'))
+#     for i in range(10):
+#         writer.writerow((i, i+2, i*2))
+# finally:
+#     csvFile.close()
+
+
+# ==========================
+# # 用 Python 发一封邮件只要 9 行代码：
+# import smtplib
+# from email.mime.text import MIMEText
+# msg = MIMEText("The body of the email is here")
+# msg['Subject'] = "An Email Alert"
+# msg['From'] = "ryan@pythonscraping.com"
+# msg['To'] = "webmaster@pythonscraping.com"
+# s = smtplib.SMTP('localhost')
+# s.send_message(msg)
+# s.quit()
+# # Python 有两个包可以发送邮件：smtplib 和 email。
+
+
+# # smtplib 模块用来设置服务器连接的相关信息。就像 MySQL 服务器的连接一样，这个连接
+# # 必须在用完之后及时关闭，以避免同时创建太多连接而浪费资源。
+# # 把这个简单的邮件程序封装成函数后，可以更方便地扩展和使用：
+# import smtplib
+# from email.mime.text import MIMEText
+# from bs4 import BeautifulSoup
+# from urllib.request import urlopen
+# import time
+
+
+# def sendMail(subject, body):
+#     msg = MIMEText(body)
+#     msg['Subject'] = subject
+#     msg['From'] = "christmas_alerts@pythonscraping.com"
+#     msg['To'] = "ryan@pythonscraping.com"
+
+
+# s = smtplib.SMTP('localhost')
+# s.send_message(msg)
+# s.quit()
+# bsObj = BeautifulSoup(urlopen("https://isitchristmas.com/"))
+# while(bsObj.find("a", {"id": "answer"}).attrs['title'] == "NO"):
+#     print("It is not Christmas yet.")
+#     time.sleep(3600)
+# bsObj = BeautifulSoup(urlopen("https://isitchristmas.com/"))
+# sendMail("It's Christmas!",
+#          "According to http://itischristmas.com, it is Christmas!")
+# # 这个程序每小时检查一次 https: // isitchristmas.com / 网站（根据日期判断当天是不是圣诞
+# # 节）。如果页面上的信息不是“NO”（中国用户在网站页面上看到的“NO”在源代码里是
+# # <noscript > 不是 < /noscript >），就会给你发一封邮件，告诉你圣诞节到了。
+# =======================
+# Python创建 SMTP 对象语法如下
+import smtplib
+smtpObj = smtplib.SMTP([host[, port[, local_hostname]]])
+# host: SMTP 服务器主机。 你可以指定主机的ip地址或者域名如: runoob.com，这个是可选参数。
+# port: 如果你提供了 host 参数, 你需要指定 SMTP 服务使用的端口号，一般情况下 SMTP 端口号为25。
+# local_hostname: 如果 SMTP 在你的本机上，你只需要指定服务器地址为 localhost 即可。
+# Python SMTP 对象使用 sendmail 方法发送邮件，语法如下：
+SMTP.sendmail(from_addr, to_addrs, msg[, mail_options, rcpt_options])
+# from_addr: 邮件发送者地址。
+# to_addrs: 字符串列表，邮件发送地址。
+# msg: 发送消息
+# 这里要注意一下第三个参数，msg 是字符串，表示邮件。我们知道邮件一般由标题，发信人，收件人，邮件内容，附件等构成，发送邮件的时候，要注意 msg 的格式。这个格式就是 smtp 协议中定义的格式。
+
+
+# 简单实例
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+# 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码
+message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print "邮件发送成功"except smtplib.SMTPException:
+    print "Error: 无法发送邮件"
+
+# 或者
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+# 第三方 SMTP 服务
+mail_host = "smtp.XXX.com"  # 设置服务器
+mail_user = "XXXX"  # 用户名
+mail_pass = "XXXXXX"  # 口令
+
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP()
+    smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
+    smtpObj.login(mail_user, mail_pass)
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print "邮件发送成功"except smtplib.SMTPException:
+    print "Error: 无法发送邮件"
+
+
+
+# 发送html格式邮件
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+mail_msg = """
+<p>Python 邮件发送测试...</p>
+<p><a href="http://www.runoob.com">这是一个链接</a></p>
+"""
+message = MIMEText(mail_msg, 'html', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print "邮件发送成功"except smtplib.SMTPException:
+    print "Error: 无法发送邮件"
+
+
+# Python 发送带附件的邮件
+# 发送带附件的邮件，首先要创建MIMEMultipart()实例，然后构造附件，如果有多个附件，可依次构造，最后利用
+# smtplib.smtp发送。
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+#创建一个带附件的实例
+message = MIMEMultipart()
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+#邮件正文内容
+message.attach(MIMEText('这是菜鸟教程Python 邮件发送测试……', 'plain', 'utf-8'))
+
+# 构造附件1，传送当前目录下的 test.txt 文件
+att1 = MIMEText(open('test.txt', 'rb').read(), 'base64', 'utf-8')
+att1["Content-Type"] = 'application/octet-stream'# 这里的filename可以任意写，写什么名字，邮件中显示什么名字
+att1["Content-Disposition"] = 'attachment; filename="test.txt"'
+message.attach(att1)
+
+# 构造附件2，传送当前目录下的 runoob.txt 文件
+att2 = MIMEText(open('runoob.txt', 'rb').read(), 'base64', 'utf-8')
+att2["Content-Type"] = 'application/octet-stream'
+att2["Content-Disposition"] = 'attachment; filename="runoob.txt"'
+message.attach(att2)
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print "邮件发送成功"except smtplib.SMTPException:
+    print "Error: 无法发送邮件"
+
+
+
+# QQSMTP
+# QQ 邮箱 SMTP 服务器地址：smtp.qq.com，ssl 端口：465。
+# 以下实例你需要修改：发件人邮箱（你的QQ邮箱），密码，收件人邮箱（可发给自己）。
+import smtplib
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+my_sender = '429240967@qq.com'    # 发件人邮箱账号
+my_pass = 'xxxxxxxxxx'              # 发件人邮箱密码
+my_user = '429240967@qq.com'      # 收件人邮箱账号，我这边发送给自己
+
+
+def mail():
+    ret = True
+    try:
+        msg = MIMEText('填写邮件内容', 'plain', 'utf-8')
+        # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From'] = formataddr(["FromRunoob", my_sender])
+        # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['To'] = formataddr(["FK", my_user])
+        msg['Subject'] = "菜鸟教程发送邮件测试"                # 邮件的主题，也可以说是标题
+
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是25
+        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, [my_user, ], msg.as_string())
+        server.quit()  # 关闭连接
+    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = False
+    return ret
+
+
+ret = mail()
+if ret:
+    print("邮件发送成功")
+else:
+    print("邮件发送失败")
+
+
+
+# =======================
+# python 3 发邮件
+# 简单实例
+#!/usr/bin/python3
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+# 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码
+message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print("邮件发送成功")
+except smtplib.SMTPException:
+    print("Error: 无法发送邮件")
+
+
+
+
+# ============
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+# 第三方 SMTP 服务
+mail_host = "smtp.XXX.com"  # 设置服务器
+mail_user = "XXXX"  # 用户名
+mail_pass = "XXXXXX"  # 口令
+
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+message = MIMEText('Python 邮件发送测试...', 'plain', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP()
+    smtpObj.connect(mail_host, 25)    # 25 为 SMTP 端口号
+    smtpObj.login(mail_user, mail_pass)
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print("邮件发送成功")
+except smtplib.SMTPException:
+    print("Error: 无法发送邮件")
+
+
+# 使用Python发送HTML格式的邮件
+# Python发送HTML格式的邮件与发送纯文本消息的邮件不同之处就是将MIMEText中_subtype设置为html。具体代码如下
+import smtplib
+from email.mime.text import MIMEText
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+mail_msg = """
+<p>Python 邮件发送测试...</p>
+<p><a href="http://www.runoob.com">这是一个链接</a></p>
+"""
+message = MIMEText(mail_msg, 'html', 'utf-8')
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print("邮件发送成功")
+except smtplib.SMTPException:
+    print("Error: 无法发送邮件")
+
+# Python 发送带附件的邮件
+# 发送带附件的邮件，首先要创建MIMEMultipart()实例，然后构造附件，如果有多个附件，可依次构造，最后利用smtplib.smtp发送
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+#创建一个带附件的实例
+message = MIMEMultipart()
+message['From'] = Header("菜鸟教程", 'utf-8')
+message['To'] = Header("测试", 'utf-8')
+subject = 'Python SMTP 邮件测试'
+message['Subject'] = Header(subject, 'utf-8')
+
+#邮件正文内容
+message.attach(MIMEText('这是菜鸟教程Python 邮件发送测试……', 'plain', 'utf-8'))
+
+# 构造附件1，传送当前目录下的 test.txt 文件
+att1 = MIMEText(open('test.txt', 'rb').read(), 'base64', 'utf-8')
+att1["Content-Type"] = 'application/octet-stream'# 这里的filename可以任意写，写什么名字，邮件中显示什么名字
+att1["Content-Disposition"] = 'attachment; filename="test.txt"'
+message.attach(att1)
+
+# 构造附件2，传送当前目录下的 runoob.txt 文件
+att2 = MIMEText(open('runoob.txt', 'rb').read(), 'base64', 'utf-8')
+att2["Content-Type"] = 'application/octet-stream'
+att2["Content-Disposition"] = 'attachment; filename="runoob.txt"'
+message.attach(att2)
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, message.as_string())
+    print("邮件发送成功")
+except smtplib.SMTPException:
+    print("Error: 无法发送邮件")
+
+
+# 在 HTML 文本中添加图片
+# 邮件的 HTML 文本中一般邮件服务商添加外链是无效的，正确添加突破的实例如下所示：
+import smtplib
+from email.mime.image import MIMEImage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.header import Header
+
+sender = 'from@runoob.com'
+receivers = ['429240967@qq.com']  # 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+msgRoot = MIMEMultipart('related')
+msgRoot['From'] = Header("菜鸟教程", 'utf-8')
+msgRoot['To'] = Header("测试", 'utf-8')
+subject = 'Python SMTP 邮件测试'
+msgRoot['Subject'] = Header(subject, 'utf-8')
+
+msgAlternative = MIMEMultipart('alternative')
+msgRoot.attach(msgAlternative)
+
+
+mail_msg = """
+<p>Python 邮件发送测试...</p>
+<p><a href="http://www.runoob.com">菜鸟教程链接</a></p>
+<p>图片演示：</p>
+<p><img src="cid:image1"></p>
+"""
+msgAlternative.attach(MIMEText(mail_msg, 'html', 'utf-8'))
+
+# 指定图片为当前目录
+fp = open('test.png', 'rb')
+msgImage = MIMEImage(fp.read())
+fp.close()
+
+# 定义图片 ID，在 HTML 文本中引用
+msgImage.add_header('Content-ID', '<image1>')
+msgRoot.attach(msgImage)
+
+try:
+    smtpObj = smtplib.SMTP('localhost')
+    smtpObj.sendmail(sender, receivers, msgRoot.as_string())
+    print("邮件发送成功")
+except smtplib.SMTPException:
+    print("Error: 无法发送邮件")
+
+
+
+# 生成授权码作为密码
+# QQ 邮箱 SMTP 服务器地址：smtp.qq.com，ssl 端口：465。
+# 以下实例你需要修改：发件人邮箱（你的QQ邮箱），密码，收件人邮箱（可发给自己）。
+import smtplib
+from email.mime.text import MIMEText
+from email.utils import formataddr
+
+my_sender = '429240967@qq.com'    # 发件人邮箱账号
+my_pass = 'xxxxxxxxxx'              # 发件人邮箱密码
+my_user = '429240967@qq.com'      # 收件人邮箱账号，我这边发送给自己
+
+
+def mail():
+    ret = True
+    try:
+        msg = MIMEText('填写邮件内容', 'plain', 'utf-8')
+        # 括号里的对应发件人邮箱昵称、发件人邮箱账号
+        msg['From'] = formataddr(["FromRunoob", my_sender])
+        # 括号里的对应收件人邮箱昵称、收件人邮箱账号
+        msg['To'] = formataddr(["FK", my_user])
+        msg['Subject'] = "菜鸟教程发送邮件测试"                # 邮件的主题，也可以说是标题
+
+        server = smtplib.SMTP_SSL("smtp.qq.com", 465)  # 发件人邮箱中的SMTP服务器，端口是25
+        server.login(my_sender, my_pass)  # 括号中对应的是发件人邮箱账号、邮箱密码
+        # 括号中对应的是发件人邮箱账号、收件人邮箱账号、发送邮件
+        server.sendmail(my_sender, [my_user, ], msg.as_string())
+        server.quit()  # 关闭连接
+    except Exception:  # 如果 try 中的语句没有执行，则会执行下面的 ret=False
+        ret = False
+    return ret
+
+
+ret = mail()
+if ret:
+    print("邮件发送成功")
+else:
+    print("邮件发送失败")
+
+
+# my_sender = '763468203@qq.com'    # 发件人邮箱账号
+# my_pass = 'tuvfgsfqxfrcbfai'              # 发件人邮箱密码
+
+```
+
+
+
+
+

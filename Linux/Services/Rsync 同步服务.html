@@ -1,0 +1,1282 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Rsync 同步服务 · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="MariaDB MySQL 服务.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Basics/DHCP.html">
+            
+                <a href="../Basics/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Basics/RPM工具及YUM仓库.html">
+            
+                <a href="../Basics/RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Basics/SSH 远程服务及SCP.html">
+            
+                <a href="../Basics/SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Basics/TCP IP.html">
+            
+                <a href="../Basics/TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Basics/文件目录管理.html">
+            
+                <a href="../Basics/文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Basics/用户身份及权限.html">
+            
+                <a href="../Basics/用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Basics/磁盘管理与文件系统.html">
+            
+                <a href="../Basics/磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Basics/网络服务管理.html">
+            
+                <a href="../Basics/网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../DevOps/Ansible/ansible.html">
+            
+                <a href="../DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../DevOps/Git相关/Git使用.html">
+            
+                <a href="../DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Environment/python环境安装.html">
+            
+                <a href="../Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../Others/Untitled.html">
+            
+                <a href="../Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../Others/markdown语法.html">
+            
+                <a href="../Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../Others/vimium快捷键.html">
+            
+                <a href="../Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="Apache web服务器.html">
+            
+                <a href="Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="Crontab 定时任务.html">
+            
+                <a href="Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="DNS 域名解析服务.html">
+            
+                <a href="DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="FTP 文件传输服务器.html">
+            
+                <a href="FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="Firewalld 防火墙.html">
+            
+                <a href="Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="LNMP 架构网站搭建.html">
+            
+                <a href="LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="MariaDB MySQL 服务.html">
+            
+                <a href="MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.8" data-path="Rsync 同步服务.html">
+            
+                <a href="Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../Python/Modules/Flask/flask博客.html">
+            
+                <a href="../../Python/Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../Python/Modules/Untitled.html">
+            
+                <a href="../../Python/Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../Python/Modules/celery/任务回调.html">
+            
+                <a href="../../Python/Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../Python/Modules/longging 日志模块.html">
+            
+                <a href="../../Python/Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../Python/Modules/内置模块.html">
+            
+                <a href="../../Python/Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../Python/Python Basics/python收集小知识.html">
+            
+                <a href="../../Python/Python Basics/python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../Python/Python Basics/python装饰器.html">
+            
+                <a href="../../Python/Python Basics/python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../Python/Python Basics/内存管理.html">
+            
+                <a href="../../Python/Python Basics/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../Python/Python Basics/函数编程.html">
+            
+                <a href="../../Python/Python Basics/函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../Python/Python Basics/并发编程.html">
+            
+                <a href="../../Python/Python Basics/并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../Python/Python Basics/数据编码和处理.html">
+            
+                <a href="../../Python/Python Basics/数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../Python/Python Basics/类与对象.html">
+            
+                <a href="../../Python/Python Basics/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../../Python/Python Basics/网络编程.html">
+            
+                <a href="../../Python/Python Basics/网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../Python/Python Wheel/Django发送Email.html">
+            
+                <a href="../../Python/Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../Python/Python Wheel/python等环境安装.html">
+            
+                <a href="../../Python/Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Rsync 同步服务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#rsync&#x7B80;&#x4ECB;">Rsync&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</a></li>
+<li><a href="#&#x529F;&#x80FD;&#x4ECB;&#x7ECD;">&#x529F;&#x80FD;&#x4ECB;&#x7ECD;</a></li>
+<li><a href="#rsync&#x7684;&#x4F01;&#x4E1A;&#x5DE5;&#x4F5C;&#x573A;&#x666F;&#x8BF4;&#x660E;">Rsync&#x7684;&#x4F01;&#x4E1A;&#x5DE5;&#x4F5C;&#x573A;&#x666F;&#x8BF4;&#x660E;</a></li>
+</ul>
+</li>
+<li><a href="#&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x540C;&#x6B65;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x4F3C;scp&#xFF09;">&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x540C;&#x6B65;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x4F3C;SCP&#xFF09;</a><ul>
+<li><a href="#&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x540C;&#x6B65;&#x6570;&#x636E;">&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x540C;&#x6B65;&#x6570;&#x636E;</a><ul>
+<li><a href="#&#x670D;&#x52A1;&#x5668;">&#x670D;&#x52A1;&#x5668;</a></li>
+<li><a href="#&#x5BA2;&#x6237;&#x7AEF;">&#x5BA2;&#x6237;&#x7AEF;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li>
+<li><a href="#rsync--inotify-&#x5B9E;&#x65F6;&#x540C;&#x6B65;httpswwwcnblogscomhukeyp10729218html"><a href="https://www.cnblogs.com/hukey/p/10729218.html" target="_blank"><strong>rsync + inotify &#x5B9E;&#x65F6;&#x540C;&#x6B65;</strong></a></a></li>
+</ul>
+<!-- tocstop -->
+<p>&#x53C2;&#x8003;&#xFF1A; <a href="https://clsn.io/clsn/lx920.html" target="_blank">https://clsn.io/clsn/lx920.html</a></p>
+<p><a href="https://www.cnblogs.com/kevingrace/category/924886.html" target="_blank">https://www.cnblogs.com/kevingrace/category/924886.html</a></p>
+<p><a href="https://www.jianshu.com/p/d32414af2001" target="_blank">https://www.jianshu.com/p/d32414af2001</a></p>
+<p><a href="https://www.centos.bz/2018/11/centos7%e4%b8%8brsynccrontab%e5%ae%9a%e6%9c%9f%e5%90%8c%e6%ad%a5%e5%a4%87%e4%bb%bd/" target="_blank">https://www.centos.bz/2018/11/centos7%e4%b8%8brsynccrontab%e5%ae%9a%e6%9c%9f%e5%90%8c%e6%ad%a5%e5%a4%87%e4%bb%bd/</a></p>
+<h1 id="rsync&#x7B80;&#x4ECB;">Rsync&#x7B80;&#x4ECB;</h1>
+<p><a href="https://www.cnblogs.com/noxy/p/8986164.html" target="_blank">https://www.cnblogs.com/noxy/p/8986164.html</a></p>
+<p>rsync &#x5177;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x57FA;&#x672C;&#x7279;&#x6027;&#xFF1A;</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x955C;&#x50CF;&#x4FDD;&#x5B58;&#x6574;&#x4E2A;&#x76EE;&#x5F55;&#x6811;&#x548C;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
+<li>&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x505A;&#x5230;&#x4FDD;&#x6301;&#x539F;&#x6765;&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#x3001;&#x65F6;&#x95F4;&#x3001;&#x8F6F;&#x786C;&#x94FE;&#x63A5;&#x7B49;</li>
+<li>&#x65E0;&#x987B;&#x7279;&#x6B8A;&#x6743;&#x9650;&#x5373;&#x53EF;&#x5B89;&#x88C5;</li>
+<li>&#x4F18;&#x5316;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#x6548;&#x7387;&#x9AD8;</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; rsh&#x3001;ssh &#x65B9;&#x5F0F;&#x6765;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x7684; socket &#x8FDE;&#x63A5;</li>
+<li>&#x652F;&#x6301;&#x533F;&#x540D;&#x4F20;&#x8F93;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x8FDB;&#x884C;&#x7F51;&#x7AD9;&#x955C;&#x8C61;</li>
+</ol>
+<p>&#x8FDC;&#x7A0B; Shell &#x65B9;&#x5F0F;&#xFF08;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; ssh&#xFF0C;&#x7528;&#x6237;&#x9A8C;&#x8BC1;&#x7531; ssh &#x8D1F;&#x8D23;&#xFF09;&#x548C; C/S &#x65B9;&#x5F0F;&#xFF08;&#x5373;&#x5BA2;&#x6237;&#x8FDE;&#x63A5;&#x8FDC;&#x7A0B; rsync &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7528;&#x6237;&#x9A8C;&#x8BC1;&#x7531; rsync &#x670D;&#x52A1;&#x5668;&#x8D1F;&#x8D23;&#xFF09;&#x3002;
+&#x65E0;&#x8BBA;&#x672C;&#x5730;&#x540C;&#x6B65;&#x76EE;&#x5F55;&#x8FD8;&#x662F;&#x8FDC;&#x7A0B;&#x540C;&#x6B65;&#x6570;&#x636E;&#xFF0C;&#x9996;&#x6B21;&#x8FD0;&#x884C;&#x65F6;&#x5C06;&#x4F1A;&#x628A;&#x5168;&#x90E8;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x4E00;&#x6B21;&#xFF0C;&#x4EE5;&#x540E;&#x518D;&#x8FD0;&#x884C;&#x65F6;&#x5C06;&#x53EA;&#x62F7;&#x8D1D;&#x6709;&#x53D8;&#x5316;&#x7684;&#x6587;&#x4EF6;&#xFF08;&#x5BF9;&#x4E8E;&#x65B0;&#x6587;&#x4EF6;&#xFF09;&#x6216;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#x90E8;&#x5206;&#xFF08;&#x5BF9;&#x4E8E;&#x539F;&#x6709;&#x6587;&#x4EF6;&#xFF09;</p>
+<pre><code>01. &#x652F;&#x6301;&#x62F7;&#x8D1D;&#x666E;&#x901A;&#x6587;&#x4EF6;&#x4E0E;&#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x5982;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#xFF0C;&#x8BBE;&#x5907;&#x7B49;&#x3002;
+02. &#x53EF;&#x4EE5;&#x6709;&#x6392;&#x9664;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x540C;&#x6B65;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6253;&#x5305;&#x547D;&#x4EE4;tar&#x7684;&#x6392;&#x9664;&#x529F;&#x80FD;&#x3002;
+    #tar zcvf backup_1.tar.gz  /opt/data  -exclude=clsn   
+    &#x8BF4;&#x660E;&#xFF1A;&#x5728;&#x6253;&#x5305;/opt/data&#x65F6;&#x5C31;&#x6392;&#x9664;&#x4E86;clsn&#x547D;&#x540D;&#x7684;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x3002;
+03. &#x53EF;&#x4EE5;&#x505A;&#x5230;&#x4FDD;&#x6301;&#x539F;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x7684;&#x6743;&#x9650;&#x3001;&#x65F6;&#x95F4;&#x3001;&#x8F6F;&#x786C;&#x94FE;&#x63A5;&#x3001;&#x5C5E;&#x4E3B;&#x3001;&#x7EC4;&#x7B49;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x5747;&#x4E0D;&#x6539;&#x53D8;-p&#x3002;
+04. &#x53EF;&#x5B9E;&#x73B0;&#x589E;&#x91CF;&#x540C;&#x6B65;&#xFF0C;&#x65E2;&#x53EA;&#x540C;&#x6B65;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x6548;&#x7387;&#x5F88;&#x9AD8;&#xFF08;tar -N&#xFF09;&#x3002;
+    # &#x5C06;&#x5907;&#x4EFD;/home &#x76EE;&#x5F55;&#x81EA; 2008-01-29 &#x4EE5;&#x6765;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;
+    # tar -N 2008-01-29 -zcvf /backups/inc-backup_$(date +%F).tar.gz /home
+    # &#x5C06;&#x5907;&#x4EFD; /home &#x76EE;&#x5F55;&#x6628;&#x5929;&#x4EE5;&#x6765;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;
+    # tar -N $(date -d yesterday &quot;+%F&quot;) -zcvf /backups/inc-backup_$(date +%F).tar.gz /home
+    # &#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x5DF2;&#x7ECF;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;
+    # tar -rf all.tar *.gif
+    &#x8BF4;&#x660E;&#xFF1A;&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x662F;&#x5C06;&#x6240;&#x6709;.gif&#x7684;&#x6587;&#x4EF6;&#x589E;&#x52A0;&#x5230;all.tar&#x7684;&#x5305;&#x91CC;&#x9762;&#x53BB;&#x3002;-r&#x662F;&#x8868;&#x793A;&#x589E;&#x52A0;&#x6587;&#x4EF6;&#x7684;&#x610F;&#x601D;&#x3002;
+05. &#x53EF;&#x4EE5;&#x4F7F;&#x7528;rcp,rsh,ssh&#x7B49;&#x65B9;&#x5F0F;&#x6765;&#x914D;&#x5408;&#x8FDB;&#x884C;&#x96A7;&#x9053;&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#xFF08;rsync&#x672C;&#x8EAB;&#x4E0D;&#x5BF9;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#xFF09;
+06. &#x53EF;&#x4EE5;&#x901A;&#x8FC7;socket(&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;)&#x4F20;&#x8F93;&#x6587;&#x4EF6;&#x548C;&#x6570;&#x636E;&#xFF08;&#x670D;&#x52A1;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#xFF09;*****&#x3002;&#x91CD;&#x70B9;&#x638C;&#x63E1;
+07. &#x652F;&#x6301;&#x533F;&#x540D;&#x7684;&#x6216;&#x8BA4;&#x8BC1;&#xFF08;&#x65E0;&#x9700;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#xFF09;&#x7684;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#x4F20;&#x8F93;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x65B9;&#x4FBF;&#x5B89;&#x5168;&#x7684;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5907;&#x4EFD;&#x53CA;&#x955C;&#x50CF;&#x3002;
+</code></pre><h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>&#x7F51;&#x5740;&#xFF1A;<a href="https://rsync.samba.org/" target="_blank">https://rsync.samba.org/</a></p>
+<p>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E2E;&#x52A9;&#xFF1A;<a href="https://github.com/WayneD/rsync/blob/master/INSTALL.md" target="_blank">https://github.com/WayneD/rsync/blob/master/INSTALL.md</a></p>
+<pre><code class="lang-bash">sudo yum -y install epel-release
+sudo yum -y install gcc g++ gawk autoconf automake python3-pip
+sudo yum -y install acl libacl-devel
+sudo yum -y install attr libattr-devel
+sudo yum -y install xxhash-devel
+sudo yum -y install libzstd-devel
+sudo yum -y install lz4-devel
+sudo yum -y install openssl-devel
+pip3 install --user commonmark
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/src
+wget https://rsync.samba.org/ftp/rsync/src/rsync-3.2.0.tar.gz
+
+tar zxf  rsync-3.2.0.tar.gz &amp;&amp; <span class="hljs-built_in">cd</span> rsync-3.2.0 &amp;&amp; ./configure --prefix=/usr/<span class="hljs-built_in">local</span>/rsync
+</code></pre>
+<h2 id="&#x529F;&#x80FD;&#x4ECB;&#x7ECD;">&#x529F;&#x80FD;&#x4ECB;&#x7ECD;</h2>
+<p><strong>&#x7C7B;&#x4F3C;&#x4E8E; cp&#xFF0C;&#x672C;&#x5730;&#x5907;&#x4EFD;&#x4F20;&#x8F93;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-bash">&#x279C;  [/root] rsync /home/lxj/index.html /root
+</code></pre>
+<p><strong>&#x7C7B;&#x4F3C;&#x4E8E;scp&#xFF0C;&#x8FDC;&#x7A0B;&#x5907;&#x4EFD;&#x4F20;&#x8F93;&#x6570;&#x636E;</strong></p>
+<pre><code class="lang-bash">&#x279C;  [/root] rsync -rp /root/index.html 192.168.44.130:/root/<span class="hljs-built_in">test</span>/
+root@192.168.44.130<span class="hljs-string">&apos;s password:
+</span></code></pre>
+<p><strong>&#x7C7B;&#x4F3C;&#x4E8E;rm  &#x5B9E;&#x73B0;&#x65E0;&#x5DEE;&#x5F02;&#x540C;&#x6B65;&#x5907;&#x4EFD;</strong>
+&#x5C06;test2&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x5907;&#x4EFD;&#x5230; test&#x76EE;&#x5F55;&#x4E0B;</p>
+<pre><code class="lang-bash">&#x279C;  [/root] rsync <span class="hljs-_">-a</span> --delete /root/<span class="hljs-built_in">test</span>2 /root/<span class="hljs-built_in">test</span>
+&#x279C;  [/root] l <span class="hljs-built_in">test</span>
+total 8.0K
+drwxr-xr-x.  3 root root   37 Jan  4 17:48 .
+dr-xr-x---. 10 root root 4.0K Jan  4 17:48 ..
+-rw-r--r--.  1 root root   25 Jan  4 17:42 index.html
+drwxr-xr-x.  2 root root   22 Jan  4 17:47 <span class="hljs-built_in">test</span>2
+</code></pre>
+<p><strong>&#x7C7B;&#x4F3C;&#x4E8E;ls &#x672C;&#x5730;&#x6587;&#x4EF6;&#x67E5;&#x770B;</strong></p>
+<pre><code class="lang-bash">&#x279C;  [/root] rsync index.html
+-rw-r--r--             25 2021/01/04 16:56:43 index.html
+
+<span class="hljs-comment"># &#x8FDC;&#x7A0B;&#x67E5;&#x770B;&#x6587;&#x4EF6;</span>
+&#x279C;  [/root] rsync 192.168.44.130:/root/<span class="hljs-built_in">test</span>/
+root@192.168.44.130<span class="hljs-string">&apos;s password:
+-rw-r--r--             25 2021/01/04 17:38:22 index.html
+</span></code></pre>
+<h2 id="rsync&#x7684;&#x4F01;&#x4E1A;&#x5DE5;&#x4F5C;&#x573A;&#x666F;&#x8BF4;&#x660E;">Rsync&#x7684;&#x4F01;&#x4E1A;&#x5DE5;&#x4F5C;&#x573A;&#x666F;&#x8BF4;&#x660E;</h2>
+<blockquote>
+<ol>
+<li><p>&#x4E24;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x540C;&#x6B65;&#xFF08;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;cron+rsync&#xFF09;</p>
+<p>&#x540C;&#x6B65;&#x7F51;&#x7AD9;&#x5185;&#x90E8;&#x4EBA;&#x5458;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF08;&#x5B9A;&#x65F6;&#x4EFB;&#x52A1;&#x6700;&#x5C0F;&#x5468;&#x671F;&#x4E3A;1&#x5206;&#x949F;&#xFF09;</p>
+</li>
+<li><p>&#x4E24;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x540C;&#x6B65;&#xFF08;&#x5B9E;&#x65F6;&#x4EFB;&#x52A1;inotify/sersync/lrsyncd+rsync&#xFF09;</p>
+<p>&#x540C;&#x6B65;&#x7F51;&#x7AD9;&#x7528;&#x6237;&#x4EBA;&#x5458;&#x6570;&#x636E;&#x4FE1;&#x606F;</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x540C;&#x6B65;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x4F3C;scp&#xFF09;">&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x540C;&#x6B65;&#x65B9;&#x5F0F;&#xFF08;&#x7C7B;&#x4F3C;SCP&#xFF09;</h1>
+<p><strong>push&#x63A8;&#x5230;&#x8FDC;&#x7A0B;,&#x5C06;&#x672C;&#x5730;&#x6570;&#x636E;&#xFF0C;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;</strong></p>
+<pre><code class="lang-bash">rsync [option] src [user@]host:dest
+
+<span class="hljs-comment"># &#x5C06;&#x672C;&#x5730;/root/test&#x76EE;&#x5F55;&#x53CA;&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x63A8;&#x9001;&#x5230;&#x8FDC;&#x7A0B;</span>
+&#x279C;  [/root] rsync -r /root/<span class="hljs-built_in">test</span> lxj@192.168.44.130:/home/lxj
+</code></pre>
+<blockquote>
+<p>/test  --&#x5C06;test&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x53CA;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x4F20;&#x8F93;
+/test/ --&#x53EA;&#x4F20;&#x8F93;test&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4FE1;&#x606F;</p>
+</blockquote>
+<p><strong>&#x5C06;&#x4ECE;&#x8FDC;&#x7A0B;&#x62C9;&#x53D6;pull,&#x5C06;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x62C9;&#x53D6;&#x5230;&#x672C;&#x5730;</strong></p>
+<pre><code class="lang-bash">rsync [option] [user@]host:src [dest] 
+
+<span class="hljs-comment">#&#x5C06;&#x8FDC;&#x7AEF;index.html&#x6587;&#x4EF6;&#x62C9;&#x53D6;&#x5230;&#x672C;&#x5730;&#x76EE;&#x5F55;</span>
+&#x279C;  [/root] rsync lxj@192.168.44.130:/home/lxj/<span class="hljs-built_in">test</span>/index.html /root
+</code></pre>
+<h2 id="&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x540C;&#x6B65;&#x6570;&#x636E;">&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x65B9;&#x5F0F;&#x540C;&#x6B65;&#x6570;&#x636E;</h2>
+<h3 id="&#x670D;&#x52A1;&#x5668;">&#x670D;&#x52A1;&#x5668;</h3>
+<p>&#x521B;&#x5EFA;rsync&#x7528;&#x6237;</p>
+<pre><code> useradd -s /sbin/nologin -M rsync
+</code></pre><p>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5907;&#x4EFD;&#x50A8;&#x5B58;&#x76EE;&#x5F55;,&#x76EE;&#x5F55;&#x4FEE;&#x6539;&#x5C5E;&#x4E3B;</p>
+<pre><code>[root@backup ~]# mkdir /backup/
+[root@backup ~]# chown -R rsync.rsync /backup/
+</code></pre><p> &#x521B;&#x5EFA;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x6587;&#x4EF6;</p>
+<pre><code>echo &quot;rsync_backup:clsn123&quot; &gt;&gt;/etc/rsync.password
+chmod 600 /etc/rsync.password
+</code></pre><p>&#x542F;&#x52A8;rsync&#x670D;</p>
+<pre><code>rsync --daemon
+</code></pre><p>&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x5B8C;&#x6210;</p>
+<pre><code>[root@backup ~]# ps -ef |grep rsync
+
+[root@backup ~]# netstat -lntup |grep rsync
+</code></pre><h3 id="&#x5BA2;&#x6237;&#x7AEF;">&#x5BA2;&#x6237;&#x7AEF;</h3>
+<p>&#x521B;&#x5EFA;&#x8BA4;&#x8BC1;&#x6587;&#x4EF6;</p>
+<p>  &#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BA4;&#x8BC1;&#x6587;&#x4EF6;&#x53EA;&#x9700;&#x8981;&#x6709;&#x5BC6;&#x7801;&#x5373;&#x53EF;</p>
+<pre><code>echo &quot;clsn123&quot; &gt;&gt;/etc/rsync.password
+chmod 600 /etc/rsync.password
+</code></pre><p>&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x4F20;&#x8F93;</p>
+<p>&#x4EA4;&#x4E92;&#x5F0F;</p>
+<pre><code class="lang-bash">[root@nfs01 ~]<span class="hljs-comment"># rsync -avzP /etc/hosts rsync_backup@172.16.1.41::backup</span>
+Password:
+sending incremental file list
+hosts
+         357 100%    0.00kB/s    0:00:00 (xfer<span class="hljs-comment">#1, to-check=0/1)</span>
+
+sent 63 bytes  received 33 bytes  9.14 bytes/sec
+total size is 357  speedup is 3.72
+</code></pre>
+<p>&#x514D;&#x4EA4;&#x4E92;&#x5F0F;</p>
+<pre><code class="lang-bash">[root@nfs01 ~]<span class="hljs-comment"># rsync -avzP /etc/hosts rsync_backup@172.16.1.41::backup --password-file=/etc/rsync.password</span>
+sending incremental file list
+hosts
+         357 100%    0.00kB/s    0:00:00 (xfer<span class="hljs-comment">#1, to-check=0/1)</span>
+
+sent 199 bytes  received 27 bytes  150.67 bytes/sec
+total size is 357  speedup is 1.58
+</code></pre>
+<h1 id="&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h1>
+<p><a href="https://clsn.io/clsn/lx920.html#3_rsycn_rsyncdconf" target="_blank">https://clsn.io/clsn/lx920.html#3_rsycn_rsyncdconf</a></p>
+<pre><code class="lang-bash">&#x279C;  [/root] vim /etc/rsyncd.conf   <span class="hljs-comment"># &#x6CA1;&#x6709;&#x5219;&#x624B;&#x52A8;&#x521B;&#x5EFA;</span>
+
+man rsyncd.conf
+</code></pre>
+<h1 id="rsync--inotify-&#x5B9E;&#x65F6;&#x540C;&#x6B65;"><a href="https://www.cnblogs.com/hukey/p/10729218.html" target="_blank"><strong>rsync + inotify &#x5B9E;&#x65F6;&#x540C;&#x6B65;</strong></a></h1>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MariaDB MySQL 服务.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MariaDB MySQL 服务">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Rsync 同步服务","level":"2.5.8","depth":2,"next":{"title":"Modules","level":"4.1","depth":1,"ref":"","articles":[{"title":"Flask","level":"4.1.1","depth":2,"ref":"","articles":[{"title":"Flask博客","level":"4.1.1.1","depth":3,"path":"Python/Modules/Flask/flask博客.md","ref":"Python/Modules/Flask/flask博客.md","articles":[]}]},{"title":"SQLalchemy","level":"4.1.2","depth":2,"ref":"","articles":[{"title":"Sqlacodegen","level":"4.1.2.1","depth":3,"path":"Python/Modules/SQLalchemy/sqlacodegen.md","ref":"Python/Modules/SQLalchemy/sqlacodegen.md","articles":[]},{"title":"Sqlalchemy博客","level":"4.1.2.2","depth":3,"path":"Python/Modules/SQLalchemy/sqlalchemy博客.md","ref":"Python/Modules/SQLalchemy/sqlalchemy博客.md","articles":[]}]},{"title":"Untitled","level":"4.1.3","depth":2,"path":"Python/Modules/Untitled.md","ref":"Python/Modules/Untitled.md","articles":[]},{"title":"Celery","level":"4.1.4","depth":2,"ref":"","articles":[{"title":"任务回调","level":"4.1.4.1","depth":3,"path":"Python/Modules/celery/任务回调.md","ref":"Python/Modules/celery/任务回调.md","articles":[]}]},{"title":"Longging 日志模块","level":"4.1.5","depth":2,"path":"Python/Modules/longging 日志模块.md","ref":"Python/Modules/longging 日志模块.md","articles":[]},{"title":"内置模块","level":"4.1.6","depth":2,"path":"Python/Modules/内置模块.md","ref":"Python/Modules/内置模块.md","articles":[]}]},"previous":{"title":"MariaDB MySQL 服务","level":"2.5.7","depth":2,"path":"Linux/Services/MariaDB MySQL 服务.md","ref":"Linux/Services/MariaDB MySQL 服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Linux/Services/Rsync 同步服务.md","mtime":"2021-01-06T04:09:00.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

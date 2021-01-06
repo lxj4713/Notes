@@ -1,0 +1,1441 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Firewalld 防火墙 · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="LNMP 架构网站搭建.html" />
+    
+    
+    <link rel="prev" href="FTP 文件传输服务器.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Basics/DHCP.html">
+            
+                <a href="../Basics/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Basics/RPM工具及YUM仓库.html">
+            
+                <a href="../Basics/RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Basics/SSH 远程服务及SCP.html">
+            
+                <a href="../Basics/SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Basics/TCP IP.html">
+            
+                <a href="../Basics/TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Basics/文件目录管理.html">
+            
+                <a href="../Basics/文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Basics/用户身份及权限.html">
+            
+                <a href="../Basics/用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Basics/磁盘管理与文件系统.html">
+            
+                <a href="../Basics/磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Basics/网络服务管理.html">
+            
+                <a href="../Basics/网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../DevOps/Ansible/ansible.html">
+            
+                <a href="../DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../DevOps/Git相关/Git使用.html">
+            
+                <a href="../DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Environment/python环境安装.html">
+            
+                <a href="../Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../Others/Untitled.html">
+            
+                <a href="../Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../Others/markdown语法.html">
+            
+                <a href="../Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../Others/vimium快捷键.html">
+            
+                <a href="../Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="Apache web服务器.html">
+            
+                <a href="Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="Crontab 定时任务.html">
+            
+                <a href="Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="DNS 域名解析服务.html">
+            
+                <a href="DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="FTP 文件传输服务器.html">
+            
+                <a href="FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.5" data-path="Firewalld 防火墙.html">
+            
+                <a href="Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="LNMP 架构网站搭建.html">
+            
+                <a href="LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.7" data-path="MariaDB MySQL 服务.html">
+            
+                <a href="MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="Rsync 同步服务.html">
+            
+                <a href="Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../Python/Modules/Flask/flask博客.html">
+            
+                <a href="../../Python/Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../Python/Modules/Untitled.html">
+            
+                <a href="../../Python/Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../Python/Modules/celery/任务回调.html">
+            
+                <a href="../../Python/Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../Python/Modules/longging 日志模块.html">
+            
+                <a href="../../Python/Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../Python/Modules/内置模块.html">
+            
+                <a href="../../Python/Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../Python/Python Basics/python收集小知识.html">
+            
+                <a href="../../Python/Python Basics/python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../Python/Python Basics/python装饰器.html">
+            
+                <a href="../../Python/Python Basics/python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../Python/Python Basics/内存管理.html">
+            
+                <a href="../../Python/Python Basics/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../Python/Python Basics/函数编程.html">
+            
+                <a href="../../Python/Python Basics/函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../Python/Python Basics/并发编程.html">
+            
+                <a href="../../Python/Python Basics/并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../Python/Python Basics/数据编码和处理.html">
+            
+                <a href="../../Python/Python Basics/数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../Python/Python Basics/类与对象.html">
+            
+                <a href="../../Python/Python Basics/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../../Python/Python Basics/网络编程.html">
+            
+                <a href="../../Python/Python Basics/网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../Python/Python Wheel/Django发送Email.html">
+            
+                <a href="../../Python/Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../Python/Python Wheel/python等环境安装.html">
+            
+                <a href="../../Python/Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Firewalld 防火墙</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#firewalld-&#x9632;&#x706B;&#x5899;">Firewalld &#x9632;&#x706B;&#x5899;</a><ul>
+<li><a href="#firewalld-&#x5E38;&#x7528;&#x547D;&#x4EE4;">Firewalld &#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li>
+<li><a href="#&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</a></li>
+<li><a href="#firewall-cmd-&#x5DE5;&#x5177;">firewall-cmd &#x5DE5;&#x5177;</a></li>
+</ul>
+</li>
+<li><a href="#iptables">Iptables</a></li>
+<li><a href="#selinux-&#x5B89;&#x5168;&#x5B50;&#x7CFB;&#x7EDF;">SELinux &#x5B89;&#x5168;&#x5B50;&#x7CFB;&#x7EDF;</a><ul>
+<li><a href="#centos7&#x5F00;&#x653E;&#x53CA;&#x67E5;&#x770B;&#x7AEF;&#x53E3;httpswwwcnblogscomheqiuyongp10460150html"><a href="https://www.cnblogs.com/heqiuyong/p/10460150.html" target="_blank">Centos7&#x5F00;&#x653E;&#x53CA;&#x67E5;&#x770B;&#x7AEF;&#x53E3;</a></a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<p>iptables&#x548C;firewalld&#x7684;&#x4ECB;&#x7ECD;&#x4E0E;&#x533A;&#x522B;   <a href="https://blog.csdn.net/Bilise/article/details/105372667" target="_blank">https://blog.csdn.net/Bilise/article/details/105372667</a></p>
+<p><a href="https://www.jianshu.com/p/cbf8e0009bc0" target="_blank">https://www.jianshu.com/p/cbf8e0009bc0</a></p>
+<p><a href="https://www.linuxprobe.com/chapter-10.html" target="_blank">https://www.linuxprobe.com/chapter-10.html</a> 10.3</p>
+<p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls#sec-Comparison_of_Firewalld_to_system-config-firewall_and_iptables" target="_blank">https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/7/html/security_guide/sec-using_firewalls#sec-Comparison_of_Firewalld_to_system-config-firewall_and_iptables</a></p>
+<h1 id="firewalld-&#x9632;&#x706B;&#x5899;">Firewalld &#x9632;&#x706B;&#x5899;</h1>
+<p>&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x6D41;&#x91CF;&#x7684;&#x6E90;&#x76EE;&#x5730;&#x5740;&#x3001;&#x7AEF;&#x53E3;&#x53F7;&#x3001;&#x534F;&#x8BAE;&#x3001;&#x5E94;&#x7528;&#x7B49;&#x4FE1;&#x606F;&#x6765;&#x5B9A;&#x5236;</p>
+<blockquote>
+<p>iptables&#x670D;&#x52A1;&#x4F1A;&#x628A;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;&#x4EA4;&#x7531;&#x5185;&#x6838;&#x5C42;&#x9762;&#x7684;netfilter&#x7F51;&#x7EDC;&#x8FC7;&#x6EE4;&#x5668;&#x6765;&#x5904;&#x7406;
+firewalld&#x670D;&#x52A1;&#x5219;&#x662F;&#x628A;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;&#x4EA4;&#x7531;&#x5185;&#x6838;&#x5C42;&#x9762;&#x7684;nftables&#x5305;&#x8FC7;&#x6EE4;&#x6846;&#x67B6;&#x6765;&#x5904;&#x7406;</p>
+<p>firewalld&#x7684;&#x914D;&#x7F6E;&#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x6709;&#x4E09;&#x79CD;&#xFF1A;firewall-config&#x3001;firewall-cmd&#x548C;&#x76F4;&#x63A5;&#x7F16;&#x8F91;xml&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D; firewall-config&#x662F;&#x56FE;&#x5F62;&#x5316;&#x5DE5;&#x5177;&#xFF0C;firewall-cmd&#x662F;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</p>
+</blockquote>
+<p><strong>&#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x88AB;&#x54EA;&#x4E2A;&#x8FDB;&#x7A0B;&#x5360;&#x7528; netstat -tunlp|grep 8080</strong></p>
+<h2 id="firewalld-&#x5E38;&#x7528;&#x547D;&#x4EE4;">Firewalld &#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<pre><code class="lang-bash">yum install firewalld firewall-config   <span class="hljs-comment"># &#x5B89;&#x88C5;</span>
+
+systemctl start  firewalld   <span class="hljs-comment"># &#x5F00;&#x542F;&#x9632;&#x706B;&#x5899;</span>
+
+systemctl restart firewalld 
+
+systemctl stop firewalld     <span class="hljs-comment"># &#x5173;&#x95ED;</span>
+
+systemctl status firewalld &#x6216;&#x8005; firewall-cmd --state   <span class="hljs-comment"># &#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;</span>
+
+systemctl <span class="hljs-built_in">enable</span> firewalld.service         <span class="hljs-comment">#&#x5F00;&#x673A;&#x542F;&#x7528;&#x670D;&#x52A1;</span>
+
+systemctl <span class="hljs-built_in">disable</span> firewalld.service        <span class="hljs-comment">#&#x5F00;&#x673A;&#x7981;&#x7528;&#x670D;&#x52A1;</span>
+
+systemctl is-enabled firewalld.service     <span class="hljs-comment">#&#x67E5;&#x770B;&#x670D;&#x52A1;&#x662F;&#x5426;&#x5F00;&#x673A;&#x542F;&#x52A8;</span>
+systemctl --failed                         <span class="hljs-comment">#&#x67E5;&#x770B;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x7684;&#x670D;&#x52A1;&#x5217;&#x8868;</span>
+systemctl list-unit-files|grep enabled     <span class="hljs-comment">#&#x67E5;&#x770B;&#x5DF2;&#x542F;&#x52A8;&#x7684;&#x670D;&#x52A1;&#x5217;&#x8868;</span>
+systemctl list-unit-files | grep firewalld.service   <span class="hljs-comment"># &#x67E5;&#x770B;&#x662F;&#x5426;&#x5F00;&#x673A;&#x542F;&#x52A8;</span>
+
+systemctl mask firewalld    <span class="hljs-comment">#&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x53D6;&#x6D88;&#x670D;&#x52A1;&#x7684;&#x9501;&#x5B9A;</span>
+
+systemctl unmask firewalld   <span class="hljs-comment"># &#x4E0B;&#x6B21;&#x9700;&#x8981;&#x9501;&#x5B9A;&#x8BE5;&#x670D;&#x52A1;&#x65F6;&#x6267;&#x884C;</span>
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<p>&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x76EE;&#x5F55;/usr/lib/firewalld/services &#x76EE;&#x5F55;&#x4E2D;&#x5B58;&#x653E;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x7F51;&#x7EDC;&#x670D;&#x52A1;&#x548C;&#x7AEF;&#x53E3;&#x53C2;&#x6570;&#xFF0C;&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</p>
+<p>&#x7528;&#x6237;&#x914D;&#x7F6E;&#x76EE;&#x5F55;/etc/firewalld/</p>
+<h2 id="firewall-cmd-&#x5DE5;&#x5177;">firewall-cmd &#x5DE5;&#x5177;</h2>
+<pre><code class="lang-bash">firewall-cmd --state <span class="hljs-comment">#&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;</span>
+firewall-cmd --reload <span class="hljs-comment">#&#x66F4;&#x65B0;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</span>
+firewall-cmd --state <span class="hljs-comment">#&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;</span>
+firewall-cmd --reload <span class="hljs-comment">#&#x91CD;&#x8F7D;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</span>
+firewall-cmd --list-ports <span class="hljs-comment">#&#x67E5;&#x770B;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;&#x7AEF;&#x53E3;</span>
+firewall-cmd --list-services <span class="hljs-comment">#&#x67E5;&#x770B;&#x6240;&#x6709;&#x5141;&#x8BB8;&#x7684;&#x670D;&#x52A1;</span>
+firewall-cmd --get-services <span class="hljs-comment">#&#x83B7;&#x53D6;&#x6240;&#x6709;&#x652F;&#x6301;&#x7684;&#x670D;&#x52A1;</span>
+
+<span class="hljs-comment">#&#x533A;&#x57DF;&#x76F8;&#x5173;</span>
+firewall-cmd --list-all-zones <span class="hljs-comment">#&#x67E5;&#x770B;&#x6240;&#x6709;&#x533A;&#x57DF;&#x4FE1;&#x606F;</span>
+firewall-cmd --get-active-zones <span class="hljs-comment">#&#x67E5;&#x770B;&#x6D3B;&#x52A8;&#x533A;&#x57DF;&#x4FE1;&#x606F;</span>
+firewall-cmd --set-default-zone=public <span class="hljs-comment">#&#x8BBE;&#x7F6E;public&#x4E3A;&#x9ED8;&#x8BA4;&#x533A;&#x57DF;</span>
+firewall-cmd --get-default-zone <span class="hljs-comment">#&#x67E5;&#x770B;&#x9ED8;&#x8BA4;&#x533A;&#x57DF;&#x4FE1;&#x606F;</span>
+firewall-cmd --zone=public --add-interface=eth0 <span class="hljs-comment">#&#x5C06;&#x63A5;&#x53E3;eth0&#x52A0;&#x5165;&#x533A;&#x57DF;public</span>
+
+<span class="hljs-comment">#&#x63A5;&#x53E3;&#x76F8;&#x5173;</span>
+firewall-cmd --zone=public --remove-interface=eth0 <span class="hljs-comment">#&#x4ECE;&#x533A;&#x57DF;public&#x4E2D;&#x5220;&#x9664;&#x63A5;&#x53E3;eth0</span>
+firewall-cmd --zone=default --change-interface=eth0 <span class="hljs-comment">#&#x4FEE;&#x6539;&#x63A5;&#x53E3;eth0&#x6240;&#x5C5E;&#x533A;&#x57DF;&#x4E3A;default</span>
+firewall-cmd --get-zone-of-interface=eth0 <span class="hljs-comment">#&#x67E5;&#x770B;&#x63A5;&#x53E3;eth0&#x6240;&#x5C5E;&#x533A;&#x57DF;</span>
+
+<span class="hljs-comment">#&#x7AEF;&#x53E3;&#x63A7;&#x5236;</span>
+firewall-cmd --add-port=80/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x6DFB;&#x52A0;80&#x7AEF;&#x53E3;&#x4F8B;&#x5916;(&#x5168;&#x5C40;)</span>
+firewall-cmd --remove-port=80/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x5220;&#x9664;80&#x7AEF;&#x53E3;&#x4F8B;&#x5916;(&#x5168;&#x5C40;)</span>
+firewall-cmd --add-port=65001-65010/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x589E;&#x52A0;65001-65010&#x4F8B;&#x5916;(&#x5168;&#x5C40;)</span>
+firewall-cmd --zone=public --add-port=80/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x6DFB;&#x52A0;80&#x7AEF;&#x53E3;&#x4F8B;&#x5916;(&#x533A;&#x57DF;public)</span>
+firewall-cmd --zone=public --remove-port=80/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x5220;&#x9664;80&#x7AEF;&#x53E3;&#x4F8B;&#x5916;(&#x533A;&#x57DF;public)</span>
+firewall-cmd --zone=public --add-port=65001-65010/tcp --permanent <span class="hljs-comment">#&#x6C38;&#x4E45;&#x589E;&#x52A0;65001-65010&#x4F8B;&#x5916;(&#x533A;&#x57DF;public)</span>
+firewall-cmd --query-port=8080/tcp <span class="hljs-comment"># &#x67E5;&#x8BE2;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5F00;&#x653E;</span>
+firewall-cmd --permanent --add-port=80/tcp <span class="hljs-comment"># &#x5F00;&#x653E;80&#x7AEF;&#x53E3;</span>
+firewall-cmd --permanent --remove-port=8080/tcp <span class="hljs-comment"># &#x79FB;&#x9664;&#x7AEF;&#x53E3;</span>
+firewall-cmd --reload <span class="hljs-comment">#&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;(&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x540E;&#x8981;&#x91CD;&#x542F;&#x9632;&#x706B;&#x5899;)</span>
+</code></pre>
+<pre><code class="lang-bash">&#x663E;&#x793A;&#x72B6;&#x6001;&#xFF1A;$ firewall-cmd --state
+
+&#x67E5;&#x770B;&#x533A;&#x57DF;&#x4FE1;&#x606F;: $ firewall-cmd --get-active-zones
+
+&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x63A5;&#x53E3;&#x6240;&#x5C5E;&#x533A;&#x57DF;&#xFF1A;$ firewall-cmd --get-zone-of-interface=eth0
+
+&#x62D2;&#x7EDD;&#x6240;&#x6709;&#x5305;&#xFF1A;<span class="hljs-comment"># firewall-cmd --panic-on</span>
+
+&#x53D6;&#x6D88;&#x62D2;&#x7EDD;&#x72B6;&#x6001;&#xFF1A;<span class="hljs-comment"># firewall-cmd --panic-off</span>
+
+&#x67E5;&#x770B;&#x662F;&#x5426;&#x62D2;&#x7EDD;&#xFF1A;$ firewall-cmd --query-panic
+
+
+
+&#x66F4;&#x65B0;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#xFF1A;<span class="hljs-comment"># firewall-cmd --reload</span>
+
+          <span class="hljs-comment"># firewall-cmd --complete-reload</span>
+
+    &#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x65E0;&#x9700;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x5C31;&#x662F;firewalld&#x7279;&#x6027;&#x4E4B;&#x4E00;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x89C4;&#x5219;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x9700;&#x8981;&#x65AD;&#x5F00;&#x8FDE;&#x63A5;&#xFF0C;&#x7C7B;&#x4F3C;&#x91CD;&#x542F;&#x670D;&#x52A1;
+
+
+
+&#x5C06;&#x63A5;&#x53E3;&#x6DFB;&#x52A0;&#x5230;&#x533A;&#x57DF;&#xFF0C;&#x9ED8;&#x8BA4;&#x63A5;&#x53E3;&#x90FD;&#x5728;public
+
+<span class="hljs-comment"># firewall-cmd --zone=public --add-interface=eth0</span>
+
+&#x6C38;&#x4E45;&#x751F;&#x6548;&#x518D;&#x52A0;&#x4E0A; --permanent &#x7136;&#x540E;reload&#x9632;&#x706B;&#x5899;
+
+
+
+&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x63A5;&#x53E3;&#x533A;&#x57DF;
+
+<span class="hljs-comment"># firewall-cmd --set-default-zone=public</span>
+
+&#x7ACB;&#x5373;&#x751F;&#x6548;&#x65E0;&#x9700;&#x91CD;&#x542F;
+
+
+
+&#x6253;&#x5F00;&#x7AEF;&#x53E3;&#xFF08;&#x8C8C;&#x4F3C;&#x8FD9;&#x4E2A;&#x624D;&#x6700;&#x5E38;&#x7528;&#xFF09;
+
+&#x67E5;&#x770B;&#x6240;&#x6709;&#x6253;&#x5F00;&#x7684;&#x7AEF;&#x53E3;&#xFF1A;
+
+<span class="hljs-comment"># firewall-cmd --zone=dmz --list-ports</span>
+
+&#x52A0;&#x5165;&#x4E00;&#x4E2A;&#x7AEF;&#x53E3;&#x5230;&#x533A;&#x57DF;&#xFF1A;
+
+<span class="hljs-comment"># firewall-cmd --zone=dmz --add-port=8080/tcp</span>
+
+&#x82E5;&#x8981;&#x6C38;&#x4E45;&#x751F;&#x6548;&#x65B9;&#x6CD5;&#x540C;&#x4E0A;
+
+
+
+&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x5C06;&#x7AEF;&#x53E3;&#x53EF;&#x89C6;&#x5316;&#xFF0C;&#x670D;&#x52A1;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#xFF0C;/etc/firewalld &#x76EE;&#x5F55;&#x4E0B;&#x6709;services&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0D;&#x8BE6;&#x7EC6;&#x8BF4;&#x4E86;&#xFF0C;&#x8BE6;&#x60C5;&#x53C2;&#x8003;&#x6587;&#x6863;
+
+<span class="hljs-comment"># firewall-cmd --zone=work --add-service=smtp</span>
+
+
+
+&#x79FB;&#x9664;&#x670D;&#x52A1;
+
+<span class="hljs-comment"># firewall-cmd --zone=work --remove-service=smtp</span>
+</code></pre>
+<pre><code class="lang-bash">
+
+</code></pre>
+<h1 id="iptables">Iptables</h1>
+<pre><code class="lang-bash">yum install iptables-services <span class="hljs-comment">#&#x5B89;&#x88C5;iptables</span>
+systemctl stop firewalld.service <span class="hljs-comment">#&#x505C;&#x6B62;firewalld</span>
+systemctl mask firewalld.service <span class="hljs-comment">#&#x7981;&#x6B62;&#x81EA;&#x52A8;&#x548C;&#x624B;&#x52A8;&#x542F;&#x52A8;firewalld</span>
+systemctl start iptables.service <span class="hljs-comment">#&#x542F;&#x52A8;iptables</span>
+systemctl start ip6tables.service <span class="hljs-comment">#&#x542F;&#x52A8;ip6tables</span>
+systemctl <span class="hljs-built_in">enable</span> iptables.service <span class="hljs-comment">#&#x8BBE;&#x7F6E;iptables&#x81EA;&#x542F;&#x52A8;</span>
+systemctl <span class="hljs-built_in">enable</span> ip6tables.service <span class="hljs-comment">#&#x8BBE;&#x7F6E;ip6tables&#x81EA;&#x542F;&#x52A8;</span>
+</code></pre>
+<pre><code class="lang-bash">iptables &#x57FA;&#x672C;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x4E3E;&#x4F8B;
+
+&#x4E00;&#x3001;&#x94FE;&#x53CA;NAT&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;
+1&#x3001;&#x6E05;&#x9664;&#x6240;&#x6709;&#x7684;&#x89C4;&#x5219;&#x3002;
+1&#xFF09;&#x6E05;&#x9664;&#x9884;&#x8BBE;&#x8868;filter&#x4E2D;&#x6240;&#x6709;&#x89C4;&#x5219;&#x94FE;&#x4E2D;&#x7684;&#x89C4;&#x5219;&#x3002;
+<span class="hljs-comment"># iptables -F</span>
+2&#xFF09;&#x6E05;&#x9664;&#x9884;&#x8BBE;&#x8868;filter&#x4E2D;&#x4F7F;&#x7528;&#x8005;&#x81EA;&#x5B9A;&#x94FE;&#x4E2D;&#x7684;&#x89C4;&#x5219;&#x3002;
+<span class="hljs-comment">#iptables -X</span>
+
+<span class="hljs-comment">#iptables -Z</span>
+
+3)&#x6E05;&#x695A;NAT&#x8868;&#x89C4;&#x5219;
+
+<span class="hljs-comment">#iptables -F -t nat</span>
+
+4)NAT&#x8868;&#x7684;&#x663E;&#x793A;
+
+<span class="hljs-comment">#iptables -t nat -nL</span>
+
+
+
+2&#x3001;&#x8BBE;&#x7F6E;&#x94FE;&#x7684;&#x9ED8;&#x8BA4;&#x7B56;&#x7565;&#x3002;&#x4E00;&#x822C;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x3002;
+1&#xFF09;&#x9996;&#x5148;&#x5141;&#x8BB8;&#x6240;&#x6709;&#x7684;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7981;&#x6B62;&#x6709;&#x5371;&#x9669;&#x7684;&#x5305;&#x901A;&#x8FC7;&#x653E;&#x706B;&#x5899;&#x3002;
+<span class="hljs-comment">#iptables -P INPUT ACCEPT</span>
+<span class="hljs-comment">#iptables -P OUTPUT ACCEPT</span>
+<span class="hljs-comment">#iptables -P FORWARD ACCEPT</span>
+2&#xFF09;&#x9996;&#x5148;&#x7981;&#x6B62;&#x6240;&#x6709;&#x7684;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;&#x9700;&#x8981;&#x7684;&#x670D;&#x52A1;&#x5141;&#x8BB8;&#x7279;&#x5B9A;&#x7684;&#x5305;&#x901A;&#x8FC7;&#x9632;&#x706B;&#x5899;&#x3002;
+<span class="hljs-comment">#iptables -P INPUT DROP</span>
+<span class="hljs-comment">#iptables -P OUTPUT DROP</span>
+<span class="hljs-comment">#iptables -P FORWARD DROP</span>
+3&#x3001;&#x5217;&#x51FA;&#x8868;/&#x94FE;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x89C4;&#x5219;&#x3002;&#x9ED8;&#x8BA4;&#x53EA;&#x5217;&#x51FA;filter&#x8868;&#x3002;
+<span class="hljs-comment">#iptables -L</span>
+4&#x3001;&#x5411;&#x94FE;&#x4E2D;&#x6DFB;&#x52A0;&#x89C4;&#x5219;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;&#x7528;&#x4E8E;&#x5F00;&#x653E;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#xFF1A;
+<span class="hljs-comment">#iptables -A INPUT -i lo -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A OUTPUT -o lo -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A INPUT -i eth0 -j ACEPT</span>
+<span class="hljs-comment">#iptables -A OUTPUT -o eth1 -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A FORWARD -i eth1 -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A FORWARD -0 eth1 -j ACCEPT</span>
+&#x6CE8;&#x610F;:&#x7531;&#x4E8E;&#x672C;&#x5730;&#x8FDB;&#x7A0B;&#x4E0D;&#x4F1A;&#x7ECF;&#x8FC7;FORWARD&#x94FE;&#xFF0C;&#x56E0;&#x6B64;&#x56DE;&#x73AF;&#x63A5;&#x53E3;lo&#x53EA;&#x5728;INPUT&#x548C;OUTPUT&#x4E24;&#x4E2A;&#x94FE;&#x4E0A;&#x4F5C;&#x7528;&#x3002;
+5&#x3001;&#x4F7F;&#x7528;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x94FE;&#x3002;
+<span class="hljs-comment">#iptables -N custom</span>
+<span class="hljs-comment">#iptables -A custom -s 0/0 -d 0/0 -p icmp -j DROP</span>
+<span class="hljs-comment">#iptables -A INPUT -s 0/0 -d 0/0 -j DROP</span>
+&#x4E8C;&#x3001;&#x8BBE;&#x7F6E;&#x57FA;&#x672C;&#x7684;&#x89C4;&#x5219;&#x5339;&#x914D;
+1&#x3001;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x5339;&#x914D;&#x3002;
+1&#xFF09;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp</span>
+2&#xFF09;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x534F;&#x8BAE;&#x4E4B;&#x5916;&#x7684;&#x6240;&#x6709;&#x534F;&#x8BAE;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p !tcp</span>
+2&#x3001;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x5339;&#x914D;&#x3002;
+1&#xFF09;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x7684;&#x4E3B;&#x673A;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -s 192.168.0.18</span>
+2&#xFF09;&#x6307;&#x5B9A;&#x5339;&#x914D;&#x7684;&#x7F51;&#x7EDC;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -s 192.168.2.0/24</span>
+3&#xFF09;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x4E4B;&#x5916;&#x7684;&#x5730;&#x5740;&#x3002;
+<span class="hljs-comment">#iptables -A FORWARD -s !192.168.0.19</span>
+4&#xFF09;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x7F51;&#x7EDC;&#x4E4B;&#x5916;&#x7684;&#x7F51;&#x7EDC;&#x3002;
+<span class="hljs-comment">#iptables -A FORWARD -s ! 192.168.3.0/24</span>
+3&#x3001;&#x6307;&#x5B9A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x5339;&#x914D;&#x3002;
+1&#xFF09;&#x6307;&#x5B9A;&#x5355;&#x4E00;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x5339;&#x914D;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -i eth0</span>
+<span class="hljs-comment">#iptables -A FORWARD -o eth0</span>
+2&#xFF09;&#x6307;&#x5B9A;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x5339;&#x914D;&#x3002;
+<span class="hljs-comment">#iptables -A FORWARD -o ppp+</span>
+4&#x3001;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x5339;&#x914D;&#x3002;
+1&#xFF09;&#x6307;&#x5B9A;&#x5355;&#x4E00;&#x7AEF;&#x53E3;&#x5339;&#x914D;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp --sport www</span>
+<span class="hljs-comment">#iptables -A INPUT -p udp &#x2013;dport 53</span>
+2&#xFF09;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x7AEF;&#x53E3;&#x4E4B;&#x5916;&#x7684;&#x7AEF;&#x53E3;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp &#x2013;dport !22</span>
+3&#xFF09;&#x5339;&#x914D;&#x7AEF;&#x53E3;&#x8303;&#x56F4;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp &#x2013;sport 22:80</span>
+4&#xFF09;&#x5339;&#x914D;ICMP&#x7AEF;&#x53E3;&#x548C;ICMP&#x7C7B;&#x578B;&#x3002;
+<span class="hljs-comment">#iptables -A INOUT -p icmp &#x2013;icimp-type 8</span>
+5&#xFF09;&#x6307;&#x5B9A;ip&#x788E;&#x7247;&#x3002;
+&#x6BCF;
+&#x4E2A;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;&#x90FD;&#x6709;&#x4E00;&#x4E2A;MTU&#xFF08;&#x6700;&#x5927;&#x4F20;&#x8F93;&#x5355;&#x5143;&#xFF09;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x4E86;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7684;&#x6570;&#x636E;&#x5305;&#x7684;&#x6700;&#x5927;&#x5C3A;&#x5BF8;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5305;&#x5927;&#x4E8E;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5C06;&#x5176;&#x5212;&#x5206;&#x6210;&#x66F4;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x5305;
+&#xFF08;&#x79F0;&#x4E3A;ip&#x788E;&#x7247;&#xFF09;&#x6765;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x63A5;&#x53D7;&#x65B9;&#x5219;&#x5BF9;&#x8FD9;&#x4E9B;ip&#x788E;&#x7247;&#x518D;&#x8FDB;&#x884C;&#x91CD;&#x7EC4;&#x4EE5;&#x8FD8;&#x539F;&#x6574;&#x4E2A;&#x5305;&#x3002;&#x8FD9;&#x6837;&#x4F1A;&#x5BFC;&#x81F4;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x5F53;&#x7CFB;&#x7EDF;&#x5C06;&#x5927;&#x6570;&#x636E;&#x5305;&#x5212;&#x5206;&#x6210;ip&#x788E;&#x7247;&#x4F20;&#x8F93;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x788E;&#x7247;&#x542B;&#x6709;
+&#x5B8C;&#x6574;&#x7684;&#x5305;&#x5934;&#x4FE1;&#x606F;&#xFF08;IP+TCP&#x3001;UDP&#x548C;ICMP&#xFF09;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x7EED;&#x7684;&#x788E;&#x7247;&#x53EA;&#x6709;&#x5305;&#x5934;&#x7684;&#x90E8;&#x5206;&#x4FE1;&#x606F;&#xFF08;&#x5982;&#x6E90;&#x5730;&#x5740;&#x3001;&#x76EE;&#x7684;&#x5730;&#x5740;&#xFF09;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x68C0;&#x67E5;&#x540E;&#x9762;&#x7684;ip&#x788E;&#x7247;&#x7684;&#x5934;&#x90E8;&#xFF08;&#x8C61;&#x6709;
+TCP&#x3001;UDP&#x548C;ICMP&#x4E00;&#x6837;&#xFF09;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x3002;&#x5047;&#x5982;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF1A;
+<span class="hljs-comment">#iptables -A FORWARD -p tcp -s 192.168.1.0/24 -d 192.168.2.100 &#x2013;dport 80 -j ACCEPT</span>
+&#x5E76;&#x4E14;&#x8FD9;&#x65F6;&#x7684;FORWARD&#x7684;policy&#x4E3A;DROP&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x53EA;&#x4F1A;&#x8BA9;&#x7B2C;&#x4E00;&#x4E2A;ip&#x788E;&#x7247;&#x901A;&#x8FC7;&#xFF0C;&#x800C;&#x4F59;&#x4E0B;&#x7684;&#x788E;&#x7247;&#x56E0;&#x4E3A;&#x5305;&#x5934;&#x4FE1;&#x606F;&#x4E0D;&#x5B8C;&#x6574;&#x800C;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x2014;fragment/<span class="hljs-_">-f</span> &#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53CA;&#x4EE5;&#x540E;&#x7684;ip&#x788E;&#x7247;&#x89E3;&#x51B3;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x3002;
+<span class="hljs-comment">#iptables -A FORWARD -f -s 192.168.1.0/24 -d 192.168.2.100 -j ACCEPT</span>
+&#x6CE8;&#x610F;&#x73B0;&#x5728;&#x6709;&#x8BB8;&#x591A;&#x8FDB;&#x884C;ip&#x788E;&#x7247;&#x653B;&#x51FB;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5982;DoS&#x653B;&#x51FB;&#xFF0C;&#x56E0;&#x6B64;&#x5141;&#x8BB8;ip&#x788E;&#x7247;&#x901A;&#x8FC7;&#x662F;&#x6709;&#x5B89;&#x5168;&#x9690;&#x60A3;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E00;&#x70B9;&#x53EF;&#x4EE5;&#x91C7;&#x7528;iptables&#x7684;&#x5339;&#x914D;&#x6269;&#x5C55;&#x6765;&#x8FDB;&#x884C;&#x9650;&#x5236;&#x3002;
+&#x4E09;&#x3001;&#x8BBE;&#x7F6E;&#x6269;&#x5C55;&#x7684;&#x89C4;&#x5219;&#x5339;&#x914D;&#xFF08;&#x4E3E;&#x4F8B;&#x5DF2;&#x5FFD;&#x7565;&#x76EE;&#x6807;&#x52A8;&#x4F5C;&#xFF09;
+1&#x3001;&#x591A;&#x7AEF;&#x53E3;&#x5339;&#x914D;&#x3002;
+1&#xFF09;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x6E90;&#x7AEF;&#x53E3;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp -m multiport &#x2013;sport 22,53,80,110</span>
+2&#xFF09;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp -m multiport &#x2013;dpoort 22,53,80</span>
+3&#xFF09;&#x5339;&#x914D;&#x591A;&#x7AEF;&#x53E3;(&#x65E0;&#x8BBA;&#x662F;&#x6E90;&#x7AEF;&#x53E3;&#x8FD8;&#x662F;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#xFF09;
+<span class="hljs-comment">#iptables -A INPUT -p tcp -m multiport &#x2013;port 22,53,80,110</span>
+2&#x3001;&#x6307;&#x5B9A;TCP&#x5339;&#x914D;&#x6269;&#x5C55;
+&#x4F7F;&#x7528; &#x2013;tcp-flags &#x9009;&#x9879;&#x53EF;&#x4EE5;&#x6839;&#x636E;tcp&#x5305;&#x7684;&#x6807;&#x5FD7;&#x4F4D;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp &#x2013;tcp-flags SYN,FIN,ACK SYN</span>
+<span class="hljs-comment">#iptables -A FROWARD -p tcp &#x2013;tcp-flags ALL SYN,ACK</span>
+&#x4E0A;&#x5B9E;&#x4F8B;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x8868;&#x793A;SYN&#x3001;ACK&#x3001;FIN&#x7684;&#x6807;&#x5FD7;&#x90FD;&#x68C0;&#x67E5;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;SYN&#x5339;&#x914D;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x8868;&#x793A;ALL&#xFF08;SYN&#xFF0C;ACK&#xFF0C;FIN&#xFF0C;RST&#xFF0C;URG&#xFF0C;PSH&#xFF09;&#x7684;&#x6807;&#x5FD7;&#x90FD;&#x68C0;&#x67E5;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;&#x8BBE;&#x7F6E;&#x4E86;SYN&#x548C;ACK&#x7684;&#x5339;&#x914D;&#x3002;
+<span class="hljs-comment">#iptables -A FORWARD -p tcp --syn</span>
+&#x9009;&#x9879;&#x2014;syn&#x76F8;&#x5F53;&#x4E8E;&#x201D;--tcp-flags SYN,RST,ACK SYN&#x201D;&#x7684;&#x7B80;&#x5199;&#x3002;
+3&#x3001;<span class="hljs-built_in">limit</span>&#x901F;&#x7387;&#x5339;&#x914D;&#x6269;&#x5C55;&#x3002;
+1&#xFF09;&#x6307;&#x5B9A;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x5185;&#x5141;&#x8BB8;&#x901A;&#x8FC7;&#x7684;&#x6570;&#x636E;&#x5305;&#x4E2A;&#x6570;&#xFF0C;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x53EF;&#x4EE5;&#x662F;/second&#x3001;/minute&#x3001;/hour&#x3001;/day&#x6216;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x6BCD;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -m limit --limit 300/hour</span>
+2 )&#x6307;&#x5B9A;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x7684;&#x9600;&#x503C;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -m limit &#x2013;limit-burst 10 </span>
+&#x7528;&#x6765;&#x6BD4;&#x5BF9;&#x4E00;&#x6B21;&#x540C;&#x65F6;&#x6D8C;&#x5165;&#x7684;&#x5C01;&#x5305;&#x662F;&#x5426;&#x8D85;&#x8FC7;10&#x4E2A;&#xFF0C;&#x8D85;&#x8FC7;&#x6B64;&#x4E0A;&#x9650;&#x7684;&#x5305;&#x5C06;&#x76F4;&#x63A5;&#x4E22;&#x5F03;&#x3002;
+3&#xFF09;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x901F;&#x7387;&#x9650;&#x5236;&#x548C;&#x89E6;&#x53D1;&#x9600;&#x503C;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p icmp -m limit &#x2013;-limit 3/m &#x2013;limit-burst 3</span>
+&#x8868;&#x793A;&#x6BCF;&#x5206;&#x949F;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x5927;&#x5305;&#x6570;&#x91CF;&#x4E3A;&#x9650;&#x5236;&#x901F;&#x7387;&#xFF08;&#x672C;&#x4F8B;&#x4E3A;3&#xFF09;&#x52A0;&#x4E0A;&#x5F53;&#x524D;&#x7684;&#x89E6;&#x53D1;&#x9600;&#x503C;burst&#x6570;&#x3002;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90FD;&#x53EF;&#x4FDD;&#x8BC1;3&#x4E2A;&#x6570;&#x636E;&#x5305;&#x901A;&#x8FC7;&#xFF0C;&#x89E6;&#x53D1;&#x9600;&#x503C;burst&#x76F8;&#x5F53;&#x4E8E;&#x5141;&#x8BB8;&#x989D;&#x5916;&#x7684;&#x5305;&#x6570;&#x91CF;&#x3002; 
+4&#xFF09;&#x57FA;&#x4E8E;&#x72B6;&#x6001;&#x7684;&#x5339;&#x914D;&#x6269;&#x5C55;&#xFF08;&#x8FDE;&#x63A5;&#x8DDF;&#x8E2A;&#xFF09;
+&#x6BCF;&#x4E2A;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;&#x6E90;&#x5730;&#x5740;&#x3001;&#x76EE;&#x6807;&#x5730;&#x5740;&#x3001;&#x6E90;&#x7AEF;&#x53E3;&#x3001;&#x76EE;&#x7684;&#x7AEF;&#x53E3;&#xFF0C;&#x79F0;&#x4E3A;&#x5957;&#x63A5;&#x5B57;&#x5BF9;&#xFF08;socket pairs&#xFF09;&#xFF1B;&#x534F;&#x8BAE;&#x7C7B;&#x578B;&#x3001;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#xFF08;TCP&#x534F;&#x8BAE;&#xFF09;
+&#x548C;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x7B49;&#x3002;&#x9632;&#x706B;&#x5899;&#x628A;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x79F0;&#x4E3A;&#x72B6;&#x6001;&#xFF08;stateful&#xFF09;&#x3002;&#x72B6;&#x6001;&#x5305;&#x8FC7;&#x6EE4;&#x9632;&#x706B;&#x5899;&#x80FD;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x8DDF;&#x8E2A;&#x72B6;&#x6001;&#x7684;&#x8868;&#xFF0C;&#x6BD4;&#x7B80;&#x5355;&#x5305;&#x8FC7;&#x6EE4;&#x9632;&#x706B;&#x5899;&#x5177;&#x6709;&#x66F4;&#x5927;&#x7684;&#x5B89;&#x5168;&#x6027;&#xFF0C;&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A; 
+iptables -m state &#x2013;-state [!]state [,state,state,state]
+&#x5176;&#x4E2D;&#xFF0C;state&#x8868;&#x662F;&#x4E00;&#x4E2A;&#x9017;&#x53F7;&#x5206;&#x5272;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x72B6;&#x6001;&#xFF0C;4&#x79CD;&#xFF1A;
+&gt;NEW: &#x8BE5;&#x5305;&#x60F3;&#x8981;&#x5F00;&#x59CB;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDE;&#x63A5;&#xFF08;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x6216;&#x8FDE;&#x63A5;&#x91CD;&#x5B9A;&#x5411;&#xFF09;
+&gt;RELATED:&#x8BE5;&#x5305;&#x662F;&#x5C5E;&#x4E8E;&#x67D0;&#x4E2A;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x7684;&#x8FDE;&#x63A5;&#x6240;&#x5EFA;&#x7ACB;&#x7684;&#x65B0;&#x8FDE;&#x63A5;&#x3002;&#x4E3E;&#x4F8B;&#xFF1A;
+FTP&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x8FDE;&#x63A5;&#x548C;&#x63A7;&#x5236;&#x8FDE;&#x63A5;&#x4E4B;&#x95F4;&#x5C31;&#x662F;RELATED&#x5173;&#x7CFB;&#x3002;
+&gt;ESTABLISHED&#xFF1A;&#x8BE5;&#x5305;&#x5C5E;&#x4E8E;&#x67D0;&#x4E2A;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x7684;&#x8FDE;&#x63A5;&#x3002;
+&gt;INVALID:&#x8BE5;&#x5305;&#x4E0D;&#x5339;&#x914D;&#x4E8E;&#x4EFB;&#x4F55;&#x8FDE;&#x63A5;&#xFF0C;&#x901A;&#x5E38;&#x8FD9;&#x4E9B;&#x5305;&#x88AB;DROP&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;
+&#xFF08;1&#xFF09;&#x5728;INPUT&#x94FE;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x5339;&#x914D;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x7684;&#x8FDE;&#x63A5;&#x6216;&#x7531;&#x5DF2;&#x7ECF;&#x5EFA;&#x7ACB;&#x7684;&#x8FDE;&#x63A5;&#x6240;&#x5EFA;&#x7ACB;&#x7684;&#x65B0;&#x8FDE;&#x63A5;&#x3002;&#x5373;&#x5339;&#x914D;&#x6240;&#x6709;&#x7684;TCP&#x56DE;&#x5E94;&#x5305;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -m state &#x2013;state RELATED,ESTABLISHED</span>
+&#xFF08;2&#xFF09;&#x5728;INPUT&#x94FE;&#x94FE;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x5339;&#x914D;&#x6240;&#x6709;&#x4ECE;&#x975E;eth0&#x63A5;&#x53E3;&#x6765;&#x7684;&#x8FDE;&#x63A5;&#x8BF7;&#x6C42;&#x5305;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -m state -&#x2013;state NEW -i !eth0</span>
+&#x53C8;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;ftp&#x8FDE;&#x63A5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x8FDE;&#x63A5;&#x8DDF;&#x8E2A;&#xFF1A;
+&#xFF08;1&#xFF09;&#x88AB;&#x52A8;&#xFF08;Passive&#xFF09;ftp&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;&#x3002;
+<span class="hljs-comment">#iptables -A INPUT -p tcp --sport 1024: --dport 1024: -m state &#x2013;-state ESTABLISHED -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A OUTPUT -p tcp --sport 1024: --dport 1024: -m </span>
+state -&#x2013;state ESTABLISHED,RELATED -j ACCEPT
+&#xFF08;2&#xFF09;&#x4E3B;&#x52A8;&#xFF08;Active&#xFF09;ftp&#x8FDE;&#x63A5;&#x6A21;&#x5F0F;
+<span class="hljs-comment">#iptables -A INNPUT -p tcp --sport 20 -m state &#x2013;-state ESTABLISHED,RELATED -j ACCEPT</span>
+<span class="hljs-comment">#iptables -A OUTPUT -p tcp &#x2013;OUTPUT -p tcp &#x2013;dport 20 -m state --state ESTABLISHED -j ACCEPT</span>
+</code></pre>
+<h1 id="selinux-&#x5B89;&#x5168;&#x5B50;&#x7CFB;&#x7EDF;">SELinux &#x5B89;&#x5168;&#x5B50;&#x7CFB;&#x7EDF;</h1>
+<pre><code>&#x5173;&#x95ED;selinux
+[root@ipsan-node01 ~]# setenforce 0
+setenforce: SELinux is disabled
+[root@ipsan-node01 ~]# getenforce
+Disabled
+[root@ipsan-node01 ~]# cat /etc/sysconfig/selinux
+.......
+SELINUX=disabled
+</code></pre><h3 id="centos7&#x5F00;&#x653E;&#x53CA;&#x67E5;&#x770B;&#x7AEF;&#x53E3;"><a href="https://www.cnblogs.com/heqiuyong/p/10460150.html" target="_blank">Centos7&#x5F00;&#x653E;&#x53CA;&#x67E5;&#x770B;&#x7AEF;&#x53E3;</a></h3>
+<p>1&#x3001;&#x5F00;&#x653E;&#x7AEF;&#x53E3;</p>
+<p><strong>firewall-cmd --zone=public --add-port=5672/tcp --permanent</strong>  # &#x5F00;&#x653E;5672&#x7AEF;&#x53E3;</p>
+<p><strong>firewall-cmd --zone=public --remove-port=5672/tcp --permanent</strong> #&#x5173;&#x95ED;5672&#x7AEF;&#x53E3;</p>
+<p><strong>firewall-cmd --reload</strong>  # &#x914D;&#x7F6E;&#x7ACB;&#x5373;&#x751F;&#x6548;</p>
+<p>2&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x6240;&#x6709;&#x5F00;&#x653E;&#x7684;&#x7AEF;&#x53E3;</p>
+<p><strong>firewall-cmd --zone=public --list-ports</strong></p>
+<p>3.&#x3001;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x5F00;&#x653E;&#x7684;&#x7AEF;&#x53E3;&#x592A;&#x591A;&#xFF0C;&#x5ACC;&#x9EBB;&#x70E6;&#xFF0C;&#x53EF;&#x4EE5;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x5B89;&#x5168;&#x6027;&#x81EA;&#x884C;&#x8BC4;&#x4F30;</p>
+<p><strong>systemctl stop firewalld.service</strong></p>
+<p>4&#x3001;&#x67E5;&#x770B;&#x9632;&#x706B;&#x5899;&#x72B6;&#x6001;</p>
+<p> <strong>firewall-cmd --state</strong></p>
+<p>5&#x3001;&#x67E5;&#x770B;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;</p>
+<p><strong>netstat -lnpt</strong></p>
+<p><img src="https://img2018.cnblogs.com/blog/1336432/201903/1336432-20190302110949754-1765820036.png" alt="img"></p>
+<p><em>PS:centos7&#x9ED8;&#x8BA4;&#x6CA1;&#x6709; netstat &#x547D;&#x4EE4;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5; net-tools &#x5DE5;&#x5177;&#xFF0C;yum install -y net-tools</em></p>
+<p>6&#x3001;&#x68C0;&#x67E5;&#x7AEF;&#x53E3;&#x88AB;&#x54EA;&#x4E2A;&#x8FDB;&#x7A0B;&#x5360;&#x7528;</p>
+<p><strong>netstat -lnpt |grep 5672</strong></p>
+<p><img src="https://img2018.cnblogs.com/blog/1336432/201903/1336432-20190302104128381-1210567174.png" alt="img"></p>
+<p>7&#x3001;&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<p><strong>ps 6832</strong></p>
+<p><img src="https://img2018.cnblogs.com/blog/1336432/201903/1336432-20190302104342651-779103690.png" alt="img"></p>
+<p>8&#x3001;&#x4E2D;&#x6B62;&#x8FDB;&#x7A0B;</p>
+<p><strong>kill -9 6832</strong></p>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="FTP 文件传输服务器.html" class="navigation navigation-prev " aria-label="Previous page: FTP 文件传输服务器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="LNMP 架构网站搭建.html" class="navigation navigation-next " aria-label="Next page: LNMP 架构网站搭建">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Firewalld 防火墙","level":"2.5.5","depth":2,"next":{"title":"LNMP 架构网站搭建","level":"2.5.6","depth":2,"path":"Linux/Services/LNMP 架构网站搭建.md","ref":"Linux/Services/LNMP 架构网站搭建.md","articles":[]},"previous":{"title":"FTP 文件传输服务器","level":"2.5.4","depth":2,"path":"Linux/Services/FTP 文件传输服务器.md","ref":"Linux/Services/FTP 文件传输服务器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Linux/Services/Firewalld 防火墙.md","mtime":"2021-01-06T04:05:18.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1368 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MariaDB MySQL 服务 · Note</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LXJ">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-atoc/atoc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Rsync 同步服务.html" />
+    
+    
+    <link rel="prev" href="LNMP 架构网站搭建.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">DataBase</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../Basics/DHCP.html">
+            
+                <a href="../Basics/DHCP.html">
+            
+                    
+                    DHCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../Basics/RPM工具及YUM仓库.html">
+            
+                <a href="../Basics/RPM工具及YUM仓库.html">
+            
+                    
+                    RPM工具及YUM仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../Basics/SSH 远程服务及SCP.html">
+            
+                <a href="../Basics/SSH 远程服务及SCP.html">
+            
+                    
+                    SSH 远程服务及SCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../Basics/TCP IP.html">
+            
+                <a href="../Basics/TCP IP.html">
+            
+                    
+                    TCP IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../Basics/文件目录管理.html">
+            
+                <a href="../Basics/文件目录管理.html">
+            
+                    
+                    文件目录管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../Basics/用户身份及权限.html">
+            
+                <a href="../Basics/用户身份及权限.html">
+            
+                    
+                    用户身份及权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../Basics/磁盘管理与文件系统.html">
+            
+                <a href="../Basics/磁盘管理与文件系统.html">
+            
+                    
+                    磁盘管理与文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../Basics/网络服务管理.html">
+            
+                <a href="../Basics/网络服务管理.html">
+            
+                    
+                    网络服务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    DevOps
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" >
+            
+                <span>
+            
+                    
+                    Ansible
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../DevOps/Ansible/ansible.html">
+            
+                <a href="../DevOps/Ansible/ansible.html">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" >
+            
+                <span>
+            
+                    
+                    Git相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.2.1" data-path="../DevOps/Git相关/GitBook使用.html">
+            
+                <a href="../DevOps/Git相关/GitBook使用.html">
+            
+                    
+                    GitBook使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2.2" data-path="../DevOps/Git相关/Git使用.html">
+            
+                <a href="../DevOps/Git相关/Git使用.html">
+            
+                    
+                    Git使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                <a href="../DevOps/Supervisor-Linux上的后台进程管理工具.html">
+            
+                    
+                    Supervisor Linux上的后台进程管理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <span>
+            
+                    
+                    Environment
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                <a href="../Environment/ZSH oh-my-zsh 使用.html">
+            
+                    
+                    ZSH Oh My Zsh 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../Environment/python环境安装.html">
+            
+                <a href="../Environment/python环境安装.html">
+            
+                    
+                    Python环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" >
+            
+                <span>
+            
+                    
+                    Others
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../Others/Untitled.html">
+            
+                <a href="../Others/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../Others/markdown语法.html">
+            
+                <a href="../Others/markdown语法.html">
+            
+                    
+                    Markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.3" data-path="../Others/vimium快捷键.html">
+            
+                <a href="../Others/vimium快捷键.html">
+            
+                    
+                    Vimium快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" >
+            
+                <span>
+            
+                    
+                    Services
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.5.1" data-path="Apache web服务器.html">
+            
+                <a href="Apache web服务器.html">
+            
+                    
+                    Apache Web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.2" data-path="Crontab 定时任务.html">
+            
+                <a href="Crontab 定时任务.html">
+            
+                    
+                    Crontab 定时任务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.3" data-path="DNS 域名解析服务.html">
+            
+                <a href="DNS 域名解析服务.html">
+            
+                    
+                    DNS 域名解析服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.4" data-path="FTP 文件传输服务器.html">
+            
+                <a href="FTP 文件传输服务器.html">
+            
+                    
+                    FTP 文件传输服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.5" data-path="Firewalld 防火墙.html">
+            
+                <a href="Firewalld 防火墙.html">
+            
+                    
+                    Firewalld 防火墙
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.6" data-path="LNMP 架构网站搭建.html">
+            
+                <a href="LNMP 架构网站搭建.html">
+            
+                    
+                    LNMP 架构网站搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5.7" data-path="MariaDB MySQL 服务.html">
+            
+                <a href="MariaDB MySQL 服务.html">
+            
+                    
+                    MariaDB MySQL 服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5.8" data-path="Rsync 同步服务.html">
+            
+                <a href="Rsync 同步服务.html">
+            
+                    
+                    Rsync 同步服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Notes</li>
+        
+        
+    
+
+    
+        
+        <li class="header">Python</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    Modules
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" >
+            
+                <span>
+            
+                    
+                    Flask
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../Python/Modules/Flask/flask博客.html">
+            
+                <a href="../../Python/Modules/Flask/flask博客.html">
+            
+                    
+                    Flask博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    SQLalchemy
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlacodegen.html">
+            
+                    
+                    Sqlacodegen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                <a href="../../Python/Modules/SQLalchemy/sqlalchemy博客.html">
+            
+                    
+                    Sqlalchemy博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../Python/Modules/Untitled.html">
+            
+                <a href="../../Python/Modules/Untitled.html">
+            
+                    
+                    Untitled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" >
+            
+                <span>
+            
+                    
+                    Celery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.4.1" data-path="../../Python/Modules/celery/任务回调.html">
+            
+                <a href="../../Python/Modules/celery/任务回调.html">
+            
+                    
+                    任务回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../Python/Modules/longging 日志模块.html">
+            
+                <a href="../../Python/Modules/longging 日志模块.html">
+            
+                    
+                    Longging 日志模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../Python/Modules/内置模块.html">
+            
+                <a href="../../Python/Modules/内置模块.html">
+            
+                    
+                    内置模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../Python/Python Basics/python收集小知识.html">
+            
+                <a href="../../Python/Python Basics/python收集小知识.html">
+            
+                    
+                    Python收集小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../Python/Python Basics/python装饰器.html">
+            
+                <a href="../../Python/Python Basics/python装饰器.html">
+            
+                    
+                    Python装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../Python/Python Basics/内存管理.html">
+            
+                <a href="../../Python/Python Basics/内存管理.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../Python/Python Basics/函数编程.html">
+            
+                <a href="../../Python/Python Basics/函数编程.html">
+            
+                    
+                    函数编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../Python/Python Basics/并发编程.html">
+            
+                <a href="../../Python/Python Basics/并发编程.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../Python/Python Basics/数据编码和处理.html">
+            
+                <a href="../../Python/Python Basics/数据编码和处理.html">
+            
+                    
+                    数据编码和处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../Python/Python Basics/类与对象.html">
+            
+                <a href="../../Python/Python Basics/类与对象.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../../Python/Python Basics/网络编程.html">
+            
+                <a href="../../Python/Python Basics/网络编程.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    Python Wheel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../Python/Python Wheel/Django发送Email.html">
+            
+                <a href="../../Python/Python Wheel/Django发送Email.html">
+            
+                    
+                    Django发送Email
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../Python/Python Wheel/python等环境安装.html">
+            
+                <a href="../../Python/Python Wheel/python等环境安装.html">
+            
+                    
+                    Python等环境安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MariaDB MySQL 服务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- toc -->
+<ul>
+<li><a href="#&#x521D;&#x59CB;&#x5316;mariadb&#x670D;&#x52A1;">&#x521D;&#x59CB;&#x5316;MariaDB&#x670D;&#x52A1;</a></li>
+<li><a href="#&#x5B89;&#x88C5;&#x5E76;&#x542F;&#x52A8;">&#x5B89;&#x88C5;&#x5E76;&#x542F;&#x52A8;</a></li>
+<li><a href="#mariadb-&#x5B89;&#x88C5;&#x540E;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x524D;&#x9700;&#x521D;&#x59CB;&#x5316;"><strong>MariaDB &#x5B89;&#x88C5;&#x540E;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x524D;&#x9700;&#x521D;&#x59CB;&#x5316;</strong></a><ul>
+<li><a href="#&#x7BA1;&#x7406;&#x7528;&#x6237;&#x53CA;&#x6388;&#x6743;">&#x7BA1;&#x7406;&#x7528;&#x6237;&#x53CA;&#x6388;&#x6743;</a></li>
+</ul>
+</li>
+<li><a href="#&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x4FE1;&#x606F;</a></li>
+<li><a href="#grant-&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4E3A;&#x8D26;&#x6237;&#x8FDB;&#x884C;&#x6388;&#x6743;">grant &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4E3A;&#x8D26;&#x6237;&#x8FDB;&#x884C;&#x6388;&#x6743;</a><ul>
+<li><a href="#&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;">&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</a></li>
+</ul>
+</li>
+<li><a href="#&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;</a></li>
+<li><a href="#&#x589E;&#x5220;&#x6539;&#x67E5;-crud">&#x589E;&#x5220;&#x6539;&#x67E5; CRUD</a><ul>
+<li><a href="#&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;&#x53CA;&#x6062;&#x590D;">&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;&#x53CA;&#x6062;&#x590D;</a></li>
+<li><a href="#issue">ISSUE</a></li>
+</ul>
+</li>
+<li><a href="#&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5931;&#x8D25;-host-xxx-is-not-allowed-to-connect-to-this-mariadb-server">&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5931;&#x8D25; Host &apos;xxx&apos; is not allowed to connect to this MariaDB server</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x521D;&#x59CB;&#x5316;mariadb&#x670D;&#x52A1;">&#x521D;&#x59CB;&#x5316;MariaDB&#x670D;&#x52A1;</h2>
+<h2 id="&#x5B89;&#x88C5;&#x5E76;&#x542F;&#x52A8;">&#x5B89;&#x88C5;&#x5E76;&#x542F;&#x52A8;</h2>
+<pre><code class="lang-bash">yum install mariadb mariadb-server -y
+
+systemctl start mariadb 
+systemctl <span class="hljs-built_in">enable</span> mariadb
+</code></pre>
+<h2 id="mariadb-&#x5B89;&#x88C5;&#x540E;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x524D;&#x9700;&#x521D;&#x59CB;&#x5316;"><strong>MariaDB &#x5B89;&#x88C5;&#x540E;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#x524D;&#x9700;&#x521D;&#x59CB;&#x5316;</strong></h2>
+<ol>
+<li>&#x8BBE;&#x7F6E;root&#x7BA1;&#x7406;&#x5458;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x5BC6;&#x7801;&#x503C;&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x8BE5;&#x5BC6;&#x7801;&#x5E76;&#x975E;root&#x7BA1;&#x7406;&#x5458;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x5BC6;&#x7801;&#x503C;&#x9ED8;&#x8BA4;&#x5E94;&#x8BE5;&#x4E3A;&#x7A7A;&#xFF0C;&#x53EF;&#x76F4;&#x63A5;&#x6309;&#x56DE;&#x8F66;&#x952E;&#xFF09;&#x3002;</li>
+<li>&#x8BBE;&#x7F6E;root&#x7BA1;&#x7406;&#x5458;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x4E13;&#x6709;&#x5BC6;&#x7801;&#x3002;</li>
+<li>&#x968F;&#x540E;&#x5220;&#x9664;&#x533F;&#x540D;&#x8D26;&#x6237;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;root&#x7BA1;&#x7406;&#x5458;&#x4ECE;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x6570;&#x636E;&#x5E93;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x4E1A;&#x52A1;&#x7684;&#x5B89;&#x5168;&#x6027;&#x3002;</li>
+<li>&#x5220;&#x9664;&#x9ED8;&#x8BA4;&#x7684;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53D6;&#x6D88;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</li>
+<li>&#x5237;&#x65B0;&#x6388;&#x6743;&#x5217;&#x8868;&#xFF0C;&#x8BA9;&#x521D;&#x59CB;&#x5316;&#x7684;&#x8BBE;&#x5B9A;&#x7ACB;&#x5373;&#x751F;&#x6548;&#x3002;</li>
+</ol>
+<pre><code class="lang-shell">[root@centos1 ~]# mysql_secure_installation 
+...
+Enter current password for root (enter for none):  #&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x5BC6;&#x7801;&#x4E3A;&#x7A7A;&#xFF0C;&#x76F4;&#x63A5;&#x6309;&#x56DE;&#x8F66;&#x952E;
+
+Set root password? [Y/n] y
+
+Remove anonymous users? [Y/n] y&#xFF08;&#x5220;&#x9664;&#x533F;&#x540D;&#x8D26;&#x6237;&#xFF09;
+
+Disallow root login remotely? [Y/n] y&#xFF08;&#x7981;&#x6B62;root&#x7BA1;&#x7406;&#x5458;&#x4ECE;&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF09;
+
+Remove test database and access to it? [Y/n] y&#xFF08;&#x5220;&#x9664;test&#x6570;&#x636E;&#x5E93;&#x5E76;&#x53D6;&#x6D88;&#x5BF9;&#x5B83;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF09;
+
+Reload privilege tables now? [Y/n] y&#xFF08;&#x5237;&#x65B0;&#x6388;&#x6743;&#x8868;&#xFF0C;&#x8BA9;&#x521D;&#x59CB;&#x5316;&#x540E;&#x7684;&#x8BBE;&#x5B9A;&#x7ACB;&#x5373;&#x751F;&#x6548;&#xFF09;
+</code></pre>
+<p>&#x5728;&#x5F88;&#x591A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x90FD;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7AD9;&#x5E93;&#x5206;&#x79BB;&#x7684;&#x6280;&#x672F;&#xFF08;&#x5373;&#x7F51;&#x7AD9;&#x548C;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8BA9;root&#x7BA1;&#x7406;&#x5458;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x53EF;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x521D;&#x59CB;&#x5316;&#x64CD;&#x4F5C;&#x4E2D;&#x8BBE;&#x7F6E;&#x7B56;&#x7565;&#xFF0C;&#x4EE5;&#x5141;&#x8BB8;root&#x7BA1;&#x7406;&#x5458;&#x4ECE;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;&#x3002;&#x7136;&#x540E;&#x8FD8;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x4F7F;&#x5176;&#x653E;&#x884C;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#x7684;&#x8BBF;&#x95EE;&#x8BF7;&#x6C42;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x7A0B;&#x5E8F;&#x9ED8;&#x8BA4;&#x4F1A;&#x5360;&#x7528;3306&#x7AEF;&#x53E3;&#xFF0C;&#x5728;&#x9632;&#x706B;&#x5899;&#x7B56;&#x7565;&#x4E2D;&#x670D;&#x52A1;&#x540D;&#x79F0;&#x7EDF;&#x4E00;&#x53EB;&#x4F5C;mysql&#xFF1A;</p>
+<pre><code>[root@linuxprobe ~]# firewall-cmd --permanent --add-service=mysql
+success
+[root@linuxprobe ~]# firewall-cmd --reload
+success
+</code></pre><p><strong>&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</strong></p>
+<pre><code class="lang-bash">MariaDB [(none)]&gt; SET password = PASSWORD(<span class="hljs-string">&apos;mysqlpasswd&apos;</span>);
+</code></pre>
+<h1 id="&#x7BA1;&#x7406;&#x7528;&#x6237;&#x53CA;&#x6388;&#x6743;">&#x7BA1;&#x7406;&#x7528;&#x6237;&#x53CA;&#x6388;&#x6743;</h1>
+<p><code>CREATE USER &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D; IDENTIFIED BY &apos;&#x5BC6;&#x7801;&apos;;</code>  &#x7684;&#x683C;&#x5F0F;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x8D26;&#x6237;,&#x7ED3;&#x5C3E;&#x5206;&#x53F7;(;)</p>
+<pre><code class="lang-bash">MariaDB [(none)]&gt; CREATE USER  lxj@localhost IDENTIFIED BY <span class="hljs-string">&apos;lxjsqlpassws&apos;</span>;
+Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+<h2 id="&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x4FE1;&#x606F;">&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x4FE1;&#x606F;</h2>
+<pre><code class="lang-bash">MariaDB [(none)]&gt; use mysql
+MariaDB [mysql]&gt; select host,user,password  from user <span class="hljs-built_in">where</span> user=<span class="hljs-string">&apos;lxj&apos;</span>;
++-----------+------+-------------------------------------------+
+| host      | user | password                                  |
++-----------+------+-------------------------------------------+
+| localhost | lxj  | *355C3C0FADD71D72CABEF2412BC5ADA30A492CBC |
++-----------+------+-------------------------------------------+
+1 row <span class="hljs-keyword">in</span> <span class="hljs-built_in">set</span> (0.00 sec)
+</code></pre>
+<h2 id="grant-&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4E3A;&#x8D26;&#x6237;&#x8FDB;&#x884C;&#x6388;&#x6743;">grant &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x4E3A;&#x8D26;&#x6237;&#x8FDB;&#x884C;&#x6388;&#x6743;</h2>
+<p>&#x5728;&#x4F7F;&#x7528;grant&#x547D;&#x4EE4;&#x65F6;&#x9700;&#x8981;&#x5199;&#x4E0A;&#x8981;&#x8D4B;&#x4E88;&#x7684;&#x6743;&#x9650;&#x3001;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x8868;&#x5355;&#x540D;&#x79F0;&#xFF0C;&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x8D26;&#x6237;&#x53CA;&#x4E3B;&#x673A;&#x4FE1;&#x606F;</p>
+<p>GRANT&#x547D;&#x4EE4;&#x7684;&#x5E38;&#x89C1;&#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x89E3;&#x91CA;</p>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GRANT &#x6743;&#x9650; ON &#x6570;&#x636E;&#x5E93;.&#x8868;&#x5355;&#x540D;&#x79F0; TO &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D;</td>
+<td>&#x5BF9;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x7279;&#x5B9A;&#x8868;&#x5355;&#x7ED9;&#x4E88;&#x6388;&#x6743;</td>
+</tr>
+<tr>
+<td>GRANT &#x6743;&#x9650; ON &#x6570;&#x636E;&#x5E93;.* TO &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D;</td>
+<td>&#x5BF9;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8868;&#x5355;&#x7ED9;&#x4E88;&#x6388;&#x6743;</td>
+</tr>
+<tr>
+<td>GRANT &#x6743;&#x9650; ON <em>.</em> TO &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D;</td>
+<td>&#x5BF9;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x6240;&#x6709;&#x8868;&#x5355;&#x7ED9;&#x4E88;&#x6388;&#x6743;</td>
+</tr>
+<tr>
+<td>GRANT &#x6743;&#x9650;1,&#x6743;&#x9650;2 ON &#x6570;&#x636E;&#x5E93;.* TO &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D;</td>
+<td>&#x5BF9;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8868;&#x5355;&#x7ED9;&#x4E88;&#x591A;&#x4E2A;&#x6388;&#x6743;</td>
+</tr>
+<tr>
+<td>GRANT ALL PRIVILEGES ON <em>.</em> TO &#x7528;&#x6237;&#x540D;@&#x4E3B;&#x673A;&#x540D;</td>
+<td>&#x5BF9;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x6240;&#x6709;&#x8868;&#x5355;&#x7ED9;&#x4E88;&#x5168;&#x90E8;&#x6388;&#x6743;&#xFF08;&#x9700;&#x8C28;&#x614E;&#x64CD;&#x4F5C;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-sql">MariaDB [mysql]&gt; show grants for lxj@localhost;
++----------------------------------------------------------------------------------------------------------+
+| Grants for lxj@localhost                                                                                 | 
++----------------------------------------------------------------------------------------------------------
+| GRANT USAGE ON *.* TO &apos;lxj&apos;@&apos;localhost&apos; IDENTIFIED BY PASSWORD &apos;*355C3C0FADD71D72CABEF2412BC5ADA30A492CBC&apos;
+| GRANT SELECT, INSERT, UPDATE, DELETE ON `mysql`.`user` TO &apos;lxj&apos;@&apos;localhost&apos;                             |
++----------------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+</code></pre>
+<p>&#x5207;&#x56DE;root&#x8D26;&#x6237;&#xFF0C;&#x79FB;&#x9664;&#x521A;&#x624D;&#x7684;&#x6388;&#x6743;&#xFF0C;&#x79FB;&#x9664;&#x6388;&#x6743;&#x7684;&#x547D;&#x4EE4;&#xFF08;revoke&#xFF09;&#x4E0E;&#x6388;&#x6743;&#x547D;&#x4EE4;&#xFF08;grant&#xFF09;&#x4E0D;&#x540C;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x4E00;&#x81F4;&#x7684;</p>
+<pre><code class="lang-sql">MariaDB [mysql]&gt; REVOKE SELECT,UPDATE,DELETE,INSERT ON mysql.user FROM lxj@localhost;
+Query OK, 0 rows affected (0.00 sec)
+</code></pre>
+<h1 id="&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;">&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;</h1>
+<p>&#x7B80;&#x5355;&#x64CD;&#x4F5C;&#x5982;&#x4E0B;&#xFF0C;&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x89C1;DataBases&#x7BC7;</p>
+<h2 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6CD5;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CREATE database &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x3002;</td>
+<td>&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x6570;&#x636E;&#x5E93;</td>
+</tr>
+<tr>
+<td>DESCRIBE &#x8868;&#x5355;&#x540D;&#x79F0;;</td>
+<td>&#x63CF;&#x8FF0;&#x8868;&#x5355;</td>
+</tr>
+<tr>
+<td>UPDATE &#x8868;&#x5355;&#x540D;&#x79F0; SET attribute=&#x65B0;&#x503C; WHERE attribute &gt; &#x539F;&#x59CB;&#x503C;;</td>
+<td>&#x66F4;&#x65B0;&#x8868;&#x5355;&#x4E2D;&#x7684;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>USE &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;;</td>
+<td>&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;</td>
+</tr>
+<tr>
+<td>SHOW databases;</td>
+<td>&#x663E;&#x793A;&#x5F53;&#x524D;&#x5DF2;&#x6709;&#x7684;&#x6570;&#x636E;&#x5E93;</td>
+</tr>
+<tr>
+<td>SHOW tables;</td>
+<td>&#x663E;&#x793A;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x8868;&#x5355;</td>
+</tr>
+<tr>
+<td>SELECT * FROM &#x8868;&#x5355;&#x540D;&#x79F0;;</td>
+<td>&#x4ECE;&#x8868;&#x5355;&#x4E2D;&#x9009;&#x4E2D;&#x67D0;&#x4E2A;&#x8BB0;&#x5F55;&#x503C;</td>
+</tr>
+<tr>
+<td>DELETE FROM &#x8868;&#x5355;&#x540D; WHERE attribute=&#x503C;;</td>
+<td>&#x4ECE;&#x8868;&#x5355;&#x4E2D;&#x5220;&#x9664;&#x67D0;&#x4E2A;&#x8BB0;&#x5F55;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x589E;&#x5220;&#x6539;&#x67E5;-crud">&#x589E;&#x5220;&#x6539;&#x67E5; CRUD</h2>
+<pre><code class="lang-SQL"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> mytable(<span class="hljs-keyword">rows</span>,<span class="hljs-keyword">lines</span>,<span class="hljs-keyword">name</span>) <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&apos;11&apos;</span>,<span class="hljs-string">&apos;22&apos;</span>, <span class="hljs-string">&apos;lxj&apos;</span>);
+<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">DATABASE</span> mydata;
+<span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> mytable;   # &#x5220;&#x9664;mytable&#x8868;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+<span class="hljs-keyword">UPDATE</span> mytable <span class="hljs-keyword">SET</span> <span class="hljs-keyword">rows</span>=<span class="hljs-number">55</span> ;
+<span class="hljs-keyword">SELECT</span> * <span class="hljs-keyword">FROM</span> ... <span class="hljs-keyword">WHERE</span> ...;
+</code></pre>
+<p>where&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x4F5C;&#x7528;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td>&lt;&gt;&#x6216;!=</td>
+<td>&#x4E0D;&#x76F8;&#x7B49;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&#x5927;&#x4E8E;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&#x5C0F;&#x4E8E;</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>&#x5728;&#x67D0;&#x4E2A;&#x8303;&#x56F4;&#x5185;</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td>&#x641C;&#x7D22;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;</td>
+</tr>
+<tr>
+<td>IN</td>
+<td>&#x5728;&#x5217;&#x4E2D;&#x641C;&#x7D22;&#x591A;&#x4E2A;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;&#x53CA;&#x6062;&#x590D;">&#x6570;&#x636E;&#x5E93;&#x5907;&#x4EFD;&#x53CA;&#x6062;&#x590D;</h1>
+<p>mysqldump &#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5907;&#x4EFD;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;</p>
+<blockquote>
+<p>mysqldump [&#x53C2;&#x6570;] [&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;]</p>
+</blockquote>
+<p>&#x5176;&#x4E2D;&#x53C2;&#x6570;&#x4E0E;mysql&#x547D;&#x4EE4;&#x5927;&#x81F4;&#x76F8;&#x540C;&#xFF0C;-u&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x767B;&#x5F55;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8D26;&#x6237;&#x540D;&#x79F0;&#xFF0C;-p&#x53C2;&#x6570;&#x4EE3;&#x8868;&#x5BC6;&#x7801;&#x63D0;&#x793A;&#x7B26;&#x3002;</p>
+<p><strong>&#x5C06;mydata&#x6570;&#x636E;&#x5E93;&#x5185;&#x5BB9;&#x5BFC;&#x51FA;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58;&#x5230;root&#x76EE;&#x5F55;</strong></p>
+<pre><code>[root@centos1 ~]# mysqldump -u root -p mydata &gt; /root/mydata.dump
+</code></pre><p><strong>&#x8F93;&#x5165;&#x91CD;&#x5B9A;&#x5411;&#x7B26;&#x628A;&#x521A;&#x521A;&#x5907;&#x4EFD;&#x7684;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x5BFC;&#x5165;&#x5230;mysql&#x4E2D;</strong>&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x6062;&#x590D;&#x4E4B;&#x524D;&#x7684;&#x6570;&#x636E;&#x4E86;</p>
+<pre><code class="lang-sql">[root@centos1 ~]# mysql -u root -p mydata &lt; /root/mydata.dump
+</code></pre>
+<h1 id="issue">ISSUE</h1>
+<h2 id="&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5931;&#x8D25;-host-xxx-is-not-allowed-to-connect-to-this-mariadb-server">&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x5931;&#x8D25; Host &apos;xxx&apos; is not allowed to connect to this MariaDB server</h2>
+<p><strong>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x6539;&#x8868;</strong></p>
+<p>&#x4FEE;&#x6539;&#x6210;%&#x8868;&#x793A;&#xFF0C;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;root&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x5E93;</p>
+<pre><code class="lang-sql">MariaDB [mysql]&gt; update user set host=&apos;%&apos; where user=&apos;root&apos;;
+MariaDB [mysql]&gt; select host,user,password from user;
++-----------------------+------+-------------------------------------------+
+| host                  | user | password                                  |
++-----------------------+------+-------------------------------------------+
+| %                     | root | *F2B1CE8FB96529C8598D17A00309E3B737CDB63E |
++-----------------------+------+-------------------------------------------+
+5 rows in set (0.00 sec)
+</code></pre>
+<p>&#x8F93;&#x5165;&#x547D;&#x4EE4;<code>mysql&gt; FLUSH PRIVILEGES;</code> &#x4F7F;&#x4FEE;&#x6539;&#x751F;&#x6548;&#xFF0C;&#x518D;&#x6B21;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</p>
+<p><strong>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x6388;&#x6743;</strong></p>
+<p>&#x5141;&#x8BB8;root&#x4F7F;&#x7528;mypassword&#x4ECE;&#x4EFB;&#x4F55;&#x4E3B;&#x673A;&#x8FDE;&#x63A5;&#x5230;mysql&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BDD;&#x3002; </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">GRANT</span> ALL <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;%&apos;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">&apos;mypassword&apos;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;
+</code></pre>
+<p>&#x5141;&#x8BB8;&#x7528;&#x6237;myuser&#x4ECE;ip&#x4E3A;192.168.1.3&#x7684;&#x4E3B;&#x673A;&#x8FDE;&#x63A5;&#x5230;mysql&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;mypassword&#x4F5C;&#x4E3A;&#x5BC6;&#x7801; </p>
+<pre><code class="lang-sql"><span class="hljs-keyword">GRANT</span> ALL <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&apos;root&apos;</span>@<span class="hljs-string">&apos;192.168.1.3&apos;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">BY</span> 
+<span class="hljs-string">&apos;mypassword&apos;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;
+</code></pre>
+<p>&#x8F93;&#x5165;&#x547D;&#x4EE4;<code>mysql&gt; FLUSH PRIVILEGES;</code> &#x4F7F;&#x4FEE;&#x6539;&#x751F;&#x6548;&#xFF0C;&#x518D;&#x6B21;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</p>
+<p>FLUSH PRIVILEGES; &#x5237;&#x65B0;&#x5148;&#x524D;&#x7684;&#x4FEE;&#x6539;&#x3002;</p>
+<script type="text/javascript">var className='atoc';</script>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="LNMP 架构网站搭建.html" class="navigation navigation-prev " aria-label="Previous page: LNMP 架构网站搭建">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Rsync 同步服务.html" class="navigation navigation-next " aria-label="Next page: Rsync 同步服务">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MariaDB MySQL 服务","level":"2.5.7","depth":2,"next":{"title":"Rsync 同步服务","level":"2.5.8","depth":2,"path":"Linux/Services/Rsync 同步服务.md","ref":"Linux/Services/Rsync 同步服务.md","articles":[]},"previous":{"title":"LNMP 架构网站搭建","level":"2.5.6","depth":2,"path":"Linux/Services/LNMP 架构网站搭建.md","ref":"Linux/Services/LNMP 架构网站搭建.md","articles":[]},"dir":"ltr"},"config":{"plugins":["summary","atoc","multipart","back-to-top-button","chapter-fold","expandable-chapters","expandable-chapters-small","hide-element","code","splitter","-lunr","-search","search-pro","popup","-sharing","sharing-plus","todo","github","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/lxj4713/testpages"},"todo":{},"summary":{},"atoc":{"addClass":true,"className":"atoc"},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"multipart":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"theme-comscore":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"LXJ","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Note","language":"zh-hans","gitbook":"*"},"file":{"path":"Linux/Services/MariaDB MySQL 服务.md","mtime":"2021-01-06T04:08:02.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T09:29:19.791Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-atoc/atoc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
